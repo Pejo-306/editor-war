@@ -201,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDisplay: 0.5
+  textBox: {fileID: 190513408}
+  cursor: 95
 --- !u!1 &968158967
 GameObject:
   m_ObjectHideFlags: 0

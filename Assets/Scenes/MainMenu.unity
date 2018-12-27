@@ -414,6 +414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDisplay: 0.7
+  textBox: {fileID: 659470825}
+  cursor: 95
 --- !u!224 &926359499 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224396149509765896, guid: e1b6f9f9820b646e58752031250d3144,

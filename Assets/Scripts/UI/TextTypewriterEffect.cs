@@ -8,16 +8,17 @@ using UnityEngine.UI;
 public class TextTypewriterEffect : MonoBehaviour 
 {
      public float timeToDisplay = 1f;
-     private Text textBox;
+     public Text textBox;
+     public char cursor = '_';
 
      void Awake() 
      {
-         textBox = GetComponent<Text>();
          StartCoroutine(AnimateText());
      }
 
      IEnumerator AnimateText()
      {
+         string cursorString = cursor.ToString();
          string textToDisplay = textBox.text;
          float characterTimeFraction = timeToDisplay / (textToDisplay.Length + 1);
 
@@ -26,7 +27,7 @@ public class TextTypewriterEffect : MonoBehaviour
              textBox.text = textToDisplay.Substring(0, i);
              if (i < textToDisplay.Length)
              {
-                 textBox.text += "_";
+                 textBox.text += cursorString;
              }
              yield return new WaitForSeconds(characterTimeFraction);
          }
