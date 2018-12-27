@@ -6,12 +6,12 @@ public class PlayerMovement : MonoBehaviour
     public float verticalMovementSpeed = 10f;
     private Rigidbody2D rb2D;
 
-    private void Start()
+    void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         float horizontalAxisInput = Input.GetAxisRaw("Horizontal");
         float verticalAxisInput = Input.GetAxisRaw("Vertical");

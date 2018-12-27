@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class PersistantGameManager : MonoBehaviour 
+public class PersistantGameTester : MonoBehaviour
 {
-    public static PersistantGameManager Instance { get; private set; }
+    public static PersistantGameTester Instance { get; private set; }
 
     void Awake()
     {
