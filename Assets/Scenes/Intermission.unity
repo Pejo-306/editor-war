@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 190513409}
   - component: {fileID: 190513408}
   - component: {fileID: 190513410}
+  - component: {fileID: 190513411}
   m_Layer: 5
   m_Name: LevelName
   m_TagString: Untagged
@@ -181,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level name
+  m_Text: 
 --- !u!222 &190513409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -200,9 +201,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa2a6d651fbe45c3934c52f338eda3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDisplay: 0.5
+  timeToDisplay: 0.75
   textBox: {fileID: 190513408}
+  textToDisplay: Level name
   cursor: 95
+--- !u!114 &190513411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190513406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.5
+  componentsToDelay:
+  - {fileID: 190513410}
 --- !u!1 &968158967
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +519,7 @@ GameObject:
   - component: {fileID: 1649199104}
   - component: {fileID: 1649199103}
   - component: {fileID: 1649199102}
+  - component: {fileID: 1649199105}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -576,7 +593,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '|progress bar|'
+  m_Text: 
 --- !u!222 &1649199104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -584,6 +601,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649199100}
   m_CullTransparentMesh: 0
+--- !u!114 &1649199105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649199100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 0.5
+  componentsToDelay:
+  - {fileID: 1649199102}
 --- !u!1 &1814872178
 GameObject:
   m_ObjectHideFlags: 0

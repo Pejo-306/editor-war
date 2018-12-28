@@ -9,9 +9,10 @@ public class TextTypewriterEffect : MonoBehaviour
 {
      public float timeToDisplay = 1f;
      public Text textBox;
+     public string textToDisplay;
      public char cursor = '_';
 
-     void Awake() 
+     void Start() 
      {
          StartCoroutine(AnimateText());
      }
@@ -19,7 +20,6 @@ public class TextTypewriterEffect : MonoBehaviour
      IEnumerator AnimateText()
      {
          string cursorString = cursor.ToString();
-         string textToDisplay = textBox.text;
          float characterTimeFraction = timeToDisplay / (textToDisplay.Length + 1);
 
          for (int i = 0; i < textToDisplay.Length + 1; i++)

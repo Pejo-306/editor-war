@@ -10,7 +10,7 @@ public class FakeLoadingBar : MonoBehaviour
     public char progressCharacter = '#';
     public int numberOfProgressCharacters = 10;
 
-    void Awake()
+    void Start()
     {
         StartCoroutine(StartLoading());
     }
