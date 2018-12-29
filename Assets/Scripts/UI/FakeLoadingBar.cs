@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class FakeLoadingBar : MonoBehaviour
 {
-    public float timeToDisplay = 1f;
+    public float duration = 1f;
     public Text textBox;
     public char borderCharacter = '|';
     public char progressCharacter = '#';
@@ -19,7 +19,7 @@ public class FakeLoadingBar : MonoBehaviour
     {
         int progressBarLength = numberOfProgressCharacters + 2;
         string progressBar = new string(borderCharacter, 2);
-        float characterTimeFraction = timeToDisplay / (progressBarLength + 1);
+        float characterTimeFraction = duration / (progressBarLength + 1);
 
         for (int i = 0; i < progressBarLength + 1; i++)
         {

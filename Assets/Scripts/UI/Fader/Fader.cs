@@ -9,6 +9,7 @@ public class Fader : MonoBehaviour
 
     public Animator animator;
     private string nextLevelName;
+    private int nextLevelIndex = -1;
     private List<SceneLoader.SceneParameter> nextSceneParameters;
 
     void Awake()
@@ -46,6 +47,12 @@ public class Fader : MonoBehaviour
         animator.SetTrigger("FadeOut");
     }
 
+    public void FadeOutOfLevel(int levelIndex)
+    {
+        nextLevelIndex = levelIndex;
+        animator.SetTrigger("FadeOut");
+    }
+
     public void OnFadeInComplete()
     {
         animator.ResetTrigger("FadeIn");
@@ -59,7 +66,14 @@ public class Fader : MonoBehaviour
     public void OnFadeOutComplete()
     {
         animator.ResetTrigger("FadeOut");
-        SceneLoader.Instance.Load(nextLevelName, nextSceneParameters);
+        if (nextLevelIndex == -1)  // load next scene by name
+        {
+            SceneLoader.Instance.Load(nextLevelName, nextSceneParameters);
+        }
+        else  // load next scene by index
+        {
+            SceneLoader.Instance.Load(nextLevelIndex, nextSceneParameters);
+        }
     }
 }
 

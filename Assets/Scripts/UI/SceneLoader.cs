@@ -71,7 +71,6 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-
     public Dictionary<string, string> GetSceneParameters()
     {
         return parameters;
