@@ -5,6 +5,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * required scene parameters:
+ * "Loading Duration": float
+ * "Level Index": int
+ * "Level Name": string
+ * "Level Description": string
+ */
 public class IntermissionController : MonoBehaviour
 {
     public TextTypewriterEffect levelNameText;
@@ -15,12 +22,12 @@ public class IntermissionController : MonoBehaviour
 	void Awake()
     {
 		Dictionary<string, string> parameters = SceneLoader.Instance.GetSceneParameters();
-        float loadingDuration = float.Parse(parameters["loadingDuration"], 
+        float loadingDuration = float.Parse(parameters["Loading Duration"], 
                 CultureInfo.InvariantCulture.NumberFormat);
-        int levelIndex = Int32.Parse(parameters["levelIndex"]);
+        int levelIndex = Int32.Parse(parameters["Level Index"]);
 
-        levelNameText.textToDisplay = parameters["levelName"];
-        levelDescriptionTextBox.text = parameters["levelDescription"];
+        levelNameText.textToDisplay = parameters["Level Name"];
+        levelDescriptionTextBox.text = parameters["Level Description"];
         loadingBar.duration = loadingDuration; 
 
         StartCoroutine(LoadLevelAfterDelay(levelIndex, loadingDuration));
