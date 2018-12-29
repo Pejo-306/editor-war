@@ -17,26 +17,23 @@ public class IntermissionController : MonoBehaviour
     public TextTypewriterEffect levelNameText;
     public Text levelDescriptionTextBox;
     public FakeLoadingBar loadingBar;
-    public float additionalDelayTime;
+    private int nextLevelIndex;
 
-	void Awake()
+    void Awake()
     {
 		Dictionary<string, string> parameters = SceneLoader.Instance.GetSceneParameters();
         float loadingDuration = float.Parse(parameters["Loading Duration"], 
                 CultureInfo.InvariantCulture.NumberFormat);
-        int levelIndex = Int32.Parse(parameters["Level Index"]);
 
         levelNameText.textToDisplay = parameters["Level Name"];
         levelDescriptionTextBox.text = parameters["Level Description"];
         loadingBar.duration = loadingDuration; 
+        nextLevelIndex = Int32.Parse(SceneLoader.Instance.GetParameter("Level Index"));
+    }
 
-        StartCoroutine(LoadLevelAfterDelay(levelIndex, loadingDuration));
-	}
-
-    IEnumerator LoadLevelAfterDelay(int levelIndex, float loadingTime)
+    void Start()
     {
-        yield return new WaitForSeconds(loadingTime + additionalDelayTime);
-        Fader.Instance.FadeOutOfLevel(levelIndex);
+        Fader.Instance.FadeOutAfterDelay(nextLevelIndex, loadingBar.duration);
     }
 }
 

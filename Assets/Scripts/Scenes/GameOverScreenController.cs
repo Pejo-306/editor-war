@@ -5,7 +5,7 @@ public class GameOverScreenController : MonoBehaviour
     public string mainMenuName;
     public float delayTime;
 
-    void Start()
+    void OnEnable()
     {
         string scene = SceneLoader.scenesPath + mainMenuName;
 

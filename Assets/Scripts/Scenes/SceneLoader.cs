@@ -56,6 +56,10 @@ public class SceneLoader : MonoBehaviour
 
     public void SetParameter(string paramKey, string paramValue)
     {
+        if (parameters == null)
+        {
+            parameters = new Dictionary<string, string>();
+        }
         parameters.Add(paramKey, paramValue);
     }
 
