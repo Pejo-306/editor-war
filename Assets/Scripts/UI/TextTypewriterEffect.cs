@@ -12,6 +12,12 @@ public class TextTypewriterEffect : MonoBehaviour
      public string textToDisplay;
      public char cursor = '_';
 
+     void Awake()
+     {
+         textToDisplay = (textToDisplay.Length == 0) ? textBox.text : textToDisplay;
+         textBox.text = "";
+     }
+
      void Start() 
      {
          StartCoroutine(AnimateText());
