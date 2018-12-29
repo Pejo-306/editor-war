@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Fader : MonoBehaviour
@@ -48,6 +49,28 @@ public class Fader : MonoBehaviour
     {
         nextLevelIndex = levelIndex;
         animator.SetTrigger("FadeOut");
+    }
+
+    public void FadeOutAfterDelay(string levelName, float delayTime)
+    {
+        StartCoroutine(LoadLevelAfterDelay(levelName, delayTime));
+    }
+
+    public void FadeOutAfterDelay(int levelIndex, float delayTime)
+    {
+        StartCoroutine(LoadLevelAfterDelay(levelIndex, delayTime));
+    }
+
+    IEnumerator LoadLevelAfterDelay(string levelName, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        FadeOutOfLevel(levelName);
+    }
+
+    IEnumerator LoadLevelAfterDelay(int levelIndex, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        FadeOutOfLevel(levelIndex);
     }
 
     public void OnFadeInComplete()
