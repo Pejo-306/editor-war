@@ -23,7 +23,6 @@ public class IntermissionController : MonoBehaviour
         levelDescriptionTextBox.text = parameters["levelDescription"];
         loadingBar.duration = loadingDuration; 
 
-        Fader.Instance.setNextSceneParameters(new List<SceneLoader.SceneParameter>());
         StartCoroutine(LoadLevelAfterDelay(levelIndex, loadingDuration));
 	}
 

@@ -33,41 +33,13 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public void Load(string sceneName, Dictionary<string, string> parameters = null)
+    public void Load(string sceneName)
     {
-        this.parameters = (parameters == null) ? new Dictionary<string, string>() : parameters;
         SceneManager.LoadScene(sceneName);
     }
 
-    public void Load(int sceneIndex, Dictionary<string, string> parameters = null)
+    public void Load(int sceneIndex)
     {
-        this.parameters = (parameters == null) ? new Dictionary<string, string>() : parameters;
-        SceneManager.LoadScene(sceneIndex);
-    }
-
-    public void Load(string sceneName, string paramKey, string paramValue)
-    {
-        parameters = new Dictionary<string, string>();
-        parameters.Add(paramKey, paramValue);
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void Load(int sceneIndex, string paramKey, string paramValue)
-    {
-        parameters = new Dictionary<string, string>();
-        parameters.Add(paramKey, paramValue);
-        SceneManager.LoadScene(sceneIndex);
-    }
-
-    public void Load(string sceneName, List<SceneParameter> parameters)
-    {
-        parseParametersList(parameters);
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void Load(int sceneIndex, List<SceneParameter> parameters)
-    {
-        parseParametersList(parameters);
         SceneManager.LoadScene(sceneIndex);
     }
 
@@ -76,17 +48,22 @@ public class SceneLoader : MonoBehaviour
         return parameters;
     }
 
-    public string GetParam(string paramKey)
+    public string GetParameter(string paramKey)
     {
         return (parameters == null) ? "" : parameters[paramKey];
     }
 
-    public void SetParam(string paramKey, string paramValue)
+    public void SetParameter(string paramKey, string paramValue)
     {
         parameters.Add(paramKey, paramValue);
     }
 
-    private void parseParametersList(List<SceneParameter> parameters)
+    public void SetAllParameters(Dictionary<string, string> parameters)
+    {
+        this.parameters = new Dictionary<string, string>(parameters);
+    }
+
+    public void SetAllParameters(List<SceneParameter> parameters)
     {
         this.parameters = new Dictionary<string, string>();
         foreach (SceneParameter parameter in parameters)

@@ -791,6 +791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2029964564}
   - component: {fileID: 2029964563}
+  - component: {fileID: 2029964565}
   m_Layer: 0
   m_Name: IntermissionController
   m_TagString: Untagged
@@ -826,3 +827,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2029964565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029964562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfbdeea594554bfeb5c18f82888709c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneParameters: []

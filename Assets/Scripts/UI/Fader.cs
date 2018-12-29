@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Fader : MonoBehaviour
@@ -10,7 +8,6 @@ public class Fader : MonoBehaviour
     public Animator animator;
     private string nextLevelName;
     private int nextLevelIndex = -1;
-    private List<SceneLoader.SceneParameter> nextSceneParameters;
 
     void Awake()
     {
@@ -58,21 +55,16 @@ public class Fader : MonoBehaviour
         animator.ResetTrigger("FadeIn");
     }
 
-    public void setNextSceneParameters(List<SceneLoader.SceneParameter> parameters)
-    {
-        nextSceneParameters = new List<SceneLoader.SceneParameter>(parameters);
-    }
-
     public void OnFadeOutComplete()
     {
         animator.ResetTrigger("FadeOut");
         if (nextLevelIndex == -1)  // load next scene by name
         {
-            SceneLoader.Instance.Load(nextLevelName, nextSceneParameters);
+            SceneLoader.Instance.Load(nextLevelName);
         }
         else  // load next scene by index
         {
-            SceneLoader.Instance.Load(nextLevelIndex, nextSceneParameters);
+            SceneLoader.Instance.Load(nextLevelIndex);
         }
     }
 }
