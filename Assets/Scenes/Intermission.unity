@@ -182,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Level name
 --- !u!222 &190513409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDisplay: 0.75
   textBox: {fileID: 190513408}
-  textToDisplay: Level name
+  textToDisplay: 
   cursor: 95
 --- !u!114 &190513411
 MonoBehaviour:

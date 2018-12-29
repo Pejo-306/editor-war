@@ -398,7 +398,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Editor War
 --- !u!222 &659470826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDisplay: 1
   textBox: {fileID: 659470825}
-  textToDisplay: Editor War
+  textToDisplay: 
   cursor: 95
 --- !u!114 &659470828
 MonoBehaviour:
