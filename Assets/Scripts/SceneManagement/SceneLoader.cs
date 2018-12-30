@@ -65,7 +65,15 @@ public class SceneLoader : MonoBehaviour
         {
             parameters = new Dictionary<string, string>();
         }
-        parameters.Add(paramKey, paramValue);
+
+        if (!parameters.ContainsKey(paramKey))
+        {
+            parameters.Add(paramKey, paramValue);
+        }
+        else
+        {
+            parameters[paramKey] = paramValue;
+        }
     }
 
     public void SetAllParameters(Dictionary<string, string> parameters)
@@ -75,10 +83,13 @@ public class SceneLoader : MonoBehaviour
 
     public void SetAllParameters(List<SceneParameter> parameters)
     {
-        this.parameters = new Dictionary<string, string>();
+        if (this.parameters != null)
+        {
+            this.parameters.Clear();
+        }
         foreach (SceneParameter parameter in parameters)
         {
-            this.parameters.Add(parameter.paramKey, parameter.paramValue);
+            SetParameter(parameter.paramKey, parameter.paramValue);
         }
     }
 }
