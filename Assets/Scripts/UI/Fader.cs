@@ -7,6 +7,8 @@ public class Fader : MonoBehaviour
     public static Fader Instance { get; private set; }
 
     public Animator animator;
+    public bool fadeIn = true;
+    public bool fadeOut = true;
     private string nextLevelName;
     private int nextLevelIndex = -1;
 
@@ -36,29 +38,44 @@ public class Fader : MonoBehaviour
 
     public void FadeIntoLevel(Scene scene, LoadSceneMode mode)
     {
-        animator.SetTrigger("FadeIn");
+        if (fadeIn)
+        {
+            animator.SetTrigger("FadeIn");
+        }
     }
 
     public void FadeOutOfLevel(string levelName)
     {
-        nextLevelName = levelName;
-        animator.SetTrigger("FadeOut");
+        if (fadeOut)
+        {
+            nextLevelName = levelName;
+            animator.SetTrigger("FadeOut");
+        }
     }
 
     public void FadeOutOfLevel(int levelIndex)
     {
-        nextLevelIndex = levelIndex;
-        animator.SetTrigger("FadeOut");
+        if (fadeOut)
+        {
+            nextLevelIndex = levelIndex;
+            animator.SetTrigger("FadeOut");
+        }
     }
 
     public void FadeOutAfterDelay(string levelName, float delayTime)
     {
-        StartCoroutine(LoadLevelAfterDelay(levelName, delayTime));
+        if (fadeOut)
+        {
+            StartCoroutine(LoadLevelAfterDelay(levelName, delayTime));
+        }
     }
 
     public void FadeOutAfterDelay(int levelIndex, float delayTime)
     {
-        StartCoroutine(LoadLevelAfterDelay(levelIndex, delayTime));
+        if (fadeOut)
+        {
+            StartCoroutine(LoadLevelAfterDelay(levelIndex, delayTime));
+        }
     }
 
     IEnumerator LoadLevelAfterDelay(string levelName, float delayTime)
