@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Intermission.unity
     guid: b0256ba8a5d324f739390e5a1210385c
   - enabled: 1
+    path: Assets/Scenes/PlayerDeath.unity
+    guid: 8669966e762524997a3f8cfd2d917369
+  - enabled: 1
     path: Assets/Scenes/Continue.unity
     guid: 39137ed8354834023847e746931f49a6
   - enabled: 1

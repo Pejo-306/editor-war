@@ -888,7 +888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneParameters:
   - paramKey: Level Index
-    paramValue: 5
+    paramValue: 6
   - paramKey: Level Name
     paramValue: Demo
   - paramKey: Level Description
