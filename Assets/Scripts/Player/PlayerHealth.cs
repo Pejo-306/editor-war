@@ -4,12 +4,12 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health = 4;
     public float invincibilityTime = 2f;  // in seconds
-    private SpriteFlasher spriteFlasher;
+    public SpriteFlasher spriteFlasher;
     private bool isInvincible = false;
 
-    void Start()
+    void Awake()
     {
-        spriteFlasher = GetComponent<SpriteFlasher>();
+        spriteFlasher = (spriteFlasher == null) ? GetComponent<SpriteFlasher>() : spriteFlasher;
     }
 
     public void Damage(int damage = 1)
@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 // TODO: game should end here
                 Debug.Log("Player is dead");
+                PersistantGameManager.Instance.GameOver();
             }
             else
             {

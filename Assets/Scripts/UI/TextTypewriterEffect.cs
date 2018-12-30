@@ -14,12 +14,13 @@ public class TextTypewriterEffect : MonoBehaviour
 
      void Awake()
      {
-         textToDisplay = (textToDisplay.Length == 0) ? textBox.text : textToDisplay;
-         textBox.text = "";
+         textBox.enabled = false;
      }
 
      void Start() 
      {
+         textToDisplay = (textToDisplay.Length == 0) ? textBox.text : textToDisplay;
+         textBox.enabled = true;
          StartCoroutine(AnimateText());
      }
 

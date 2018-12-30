@@ -11,6 +11,7 @@ public class ContinueScreenController : MonoBehaviour
     {
         int levelIndex = Int32.Parse(SceneLoader.Instance.GetParameter("Level Index"));
 
+        PersistantGameManager.Instance.UseContinue();
         Fader.Instance.FadeOutOfLevel(levelIndex);
     }
 

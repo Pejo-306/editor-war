@@ -10,5 +10,14 @@ public class NextSceneController : MonoBehaviour
     {
 		SceneLoader.Instance.SetAllParameters(nextSceneParameters);
 	}
+
+    public void SetParameter(string paramKey, string paramValue)
+    {
+        var parameter = new SceneLoader.SceneParameter();
+        
+        parameter.paramKey = paramKey;
+        parameter.paramValue = paramValue;
+        nextSceneParameters.Add(parameter);
+    }
 }
 

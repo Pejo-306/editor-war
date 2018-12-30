@@ -1002,8 +1002,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2029964564}
   - component: {fileID: 2029964563}
-  - component: {fileID: 2029964566}
   - component: {fileID: 2029964565}
+  - component: {fileID: 2029964566}
   m_Layer: 0
   m_Name: IntermissionController
   m_TagString: Untagged

@@ -756,6 +756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852485328}
   - component: {fileID: 1852485327}
+  - component: {fileID: 1852485330}
   - component: {fileID: 1852485329}
   m_Layer: 0
   m_Name: GameOverScreenController
@@ -804,6 +805,18 @@ MonoBehaviour:
   delayTime: 1
   componentsToDelay:
   - {fileID: 1852485327}
+--- !u!114 &1852485330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852485326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfbdeea594554bfeb5c18f82888709c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneParameters: []
 --- !u!1001 &2057626153
 Prefab:
   m_ObjectHideFlags: 0

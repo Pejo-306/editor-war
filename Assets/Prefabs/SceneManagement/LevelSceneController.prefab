@@ -9,49 +9,58 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1103539380329686}
+  m_RootGameObject: {fileID: 1576704645053598}
   m_IsPrefabAsset: 1
---- !u!1 &1103539380329686
+--- !u!1 &1576704645053598
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4685799061327904}
-  - component: {fileID: 114892976801896388}
+  - component: {fileID: 4864202625916970}
+  - component: {fileID: 114942246097345494}
+  - component: {fileID: 114485585384179750}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: LevelSceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4685799061327904
+--- !u!4 &4864202625916970
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1103539380329686}
+  m_GameObject: {fileID: 1576704645053598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114892976801896388
+--- !u!114 &114485585384179750
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1103539380329686}
+  m_GameObject: {fileID: 1576704645053598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7696380952054588b6c36400e107cef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cfbdeea594554bfeb5c18f82888709c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continues: 3
-  continueSceneName: Continue
-  gameOverSceneName: GameOver
-  levelSceneController: {fileID: 0}
+  nextSceneParameters: []
+--- !u!114 &114942246097345494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576704645053598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ae369f0739f48b78c07549f6059f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

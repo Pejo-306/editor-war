@@ -256,6 +256,8 @@ GameObject:
   m_Component:
   - component: {fileID: 28636935}
   - component: {fileID: 28636934}
+  - component: {fileID: 28636936}
+  - component: {fileID: 28636937}
   m_Layer: 0
   m_Name: ContinueScreenController
   m_TagString: Untagged
@@ -287,6 +289,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28636936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28636933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfbdeea594554bfeb5c18f82888709c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneParameters: []
+--- !u!114 &28636937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28636933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  componentsToDelay:
+  - {fileID: 28636934}
 --- !u!1001 &35991247
 Prefab:
   m_ObjectHideFlags: 0
@@ -502,7 +530,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 304492800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70aac4c0304264abc87b42c7590dcb88, type: 3}
   m_Name: 
