@@ -247,6 +247,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224734326079322212, guid: ca6a5762d8c614f72a2dffd6faf7e165,
     type: 2}
   m_PrefabInternal: {fileID: 1068981109}
+--- !u!1 &583260283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583260285}
+  - component: {fileID: 583260284}
+  - component: {fileID: 583260286}
+  m_Layer: 0
+  m_Name: GameWinScreenController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &583260284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 583260283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa9245ba5e434ccc97ca69ad4708d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuSceneName: MainMenu
+  delayTime: 5
+--- !u!4 &583260285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 583260283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 529.5919, y: 281.126, z: -4.3867736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &583260286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 583260283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  componentsToDelay:
+  - {fileID: 583260284}
 --- !u!1 &769417457
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,22 +551,22 @@ Prefab:
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.78039217
+      value: 0.5411765
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.011764706
+      value: 0.8745098
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.09019608
+      value: 0.19607843
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Text
-      value: GAME OVER
+      value: GAME WIN
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
@@ -518,7 +575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1039277225875060, guid: ca6a5762d8c614f72a2dffd6faf7e165, type: 2}
       propertyPath: m_Name
-      value: GameOver
+      value: GameWin
       objectReference: {fileID: 0}
     - target: {fileID: 114580371359383922, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
@@ -747,63 +804,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d9443b27bb74f67ad6774fbf1950fb, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1852485326
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852485328}
-  - component: {fileID: 1852485327}
-  - component: {fileID: 1852485329}
-  m_Layer: 0
-  m_Name: GameOverScreenController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1852485327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1852485326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b878f1ae3e6a14d6e812631a0d84af59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenuSceneName: MainMenu
-  delayTime: 5
---- !u!4 &1852485328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1852485326}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 523.73395, y: 301.56702, z: -5.9382744}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1852485329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1852485326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 1
-  componentsToDelay:
-  - {fileID: 1852485327}
 --- !u!1001 &2057626153
 Prefab:
   m_ObjectHideFlags: 0
@@ -904,26 +904,27 @@ Prefab:
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Color.r
-      value: 0.78039217
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.011764706
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.09019608
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1039277225875060, guid: ca6a5762d8c614f72a2dffd6faf7e165, type: 2}
       propertyPath: m_Name
-      value: GameOverMessage
+      value: GameWinMessage
       objectReference: {fileID: 0}
     - target: {fileID: 114104344630579222, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}
       propertyPath: m_Text
-      value: Process terminated with default action of signal 9 (SIGGMOVR)
+      value: All text editors have been defeated. There will never be one ultimate
+        text editor to rule them all... for now...
       objectReference: {fileID: 0}
     - target: {fileID: 114564518297339234, guid: ca6a5762d8c614f72a2dffd6faf7e165,
         type: 2}

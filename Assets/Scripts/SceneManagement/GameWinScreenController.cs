@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GameOverScreenController : MonoBehaviour
+public class GameWinScreenController : MonoBehaviour
 {
     public string mainMenuSceneName;
     public float delayTime;
