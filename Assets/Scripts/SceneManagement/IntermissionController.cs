@@ -33,6 +33,7 @@ public class IntermissionController : MonoBehaviour
 
     void Start()
     {
+        GetComponent<NextSceneController>().SetNextSceneParameters();
         Fader.Instance.FadeOutAfterDelay(nextLevelIndex, loadingBar.duration);
     }
 }

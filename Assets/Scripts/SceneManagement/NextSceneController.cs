@@ -6,7 +6,7 @@ public class NextSceneController : MonoBehaviour
 {
     public List<SceneLoader.SceneParameter> nextSceneParameters;
 
-	void Start()
+	public void SetNextSceneParameters()
     {
 		SceneLoader.Instance.SetAllParameters(nextSceneParameters);
 	}

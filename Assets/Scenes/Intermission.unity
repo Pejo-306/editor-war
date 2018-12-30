@@ -494,6 +494,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1165497998}
   m_CullTransparentMesh: 0
+--- !u!114 &1342474671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114580371359383922, guid: ca6a5762d8c614f72a2dffd6faf7e165,
+    type: 2}
+  m_PrefabInternal: {fileID: 178845380}
+  m_Script: {fileID: 11500000, guid: efa2a6d651fbe45c3934c52f338eda3d, type: 3}
 --- !u!1 &1367979346 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1795304062857242, guid: 9bcdd010ea5fe4d0fa93cd14d1a33b94,
@@ -1016,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed6c7d60b0084c88b8e6ef532935ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNameText: {fileID: 0}
+  levelNameText: {fileID: 1342474671}
   levelDescriptionTextBox: {fileID: 1165498000}
   loadingBar: {fileID: 1649199102}
 --- !u!4 &2029964564

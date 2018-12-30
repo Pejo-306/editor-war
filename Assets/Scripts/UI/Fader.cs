@@ -89,6 +89,7 @@ public class Fader : MonoBehaviour
         {
             SceneLoader.Instance.Load(nextLevelIndex);
         }
+        nextLevelIndex = -1;
     }
 }
 
