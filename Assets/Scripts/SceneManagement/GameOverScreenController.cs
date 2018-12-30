@@ -2,12 +2,13 @@
 
 public class GameOverScreenController : MonoBehaviour
 {
+    public Fader fader;
     public string mainMenuSceneName;
     public float delayTime;
 
     void OnEnable()
     {
-        Fader.Instance.FadeOutAfterDelay(SceneLoader.GetScenePath(mainMenuSceneName), delayTime);
+        fader.FadeOutAfterDelay(SceneLoader.GetScenePath(mainMenuSceneName), delayTime);
     }
 }
 

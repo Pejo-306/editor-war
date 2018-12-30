@@ -237,11 +237,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4140606976376736, guid: 004b8a8193c4f4ff28e0a132018c3102, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004b8a8193c4f4ff28e0a132018c3102, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &345040448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114234705300635922, guid: 004b8a8193c4f4ff28e0a132018c3102,
+    type: 2}
+  m_PrefabInternal: {fileID: 345040447}
+  m_Script: {fileID: 11500000, guid: 6d925ac8856f94cbe8815711e2e4e9f0, type: 3}
 --- !u!224 &455977557 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224734326079322212, guid: ca6a5762d8c614f72a2dffd6faf7e165,
@@ -276,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa9245ba5e434ccc97ca69ad4708d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 345040448}
   mainMenuSceneName: MainMenu
   delayTime: 5
 --- !u!4 &583260285
@@ -812,7 +819,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4237427011015344, guid: b4d9443b27bb74f67ad6774fbf1950fb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d9443b27bb74f67ad6774fbf1950fb, type: 2}

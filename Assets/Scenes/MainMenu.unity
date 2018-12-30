@@ -195,6 +195,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224734326079322212, guid: ca6a5762d8c614f72a2dffd6faf7e165,
     type: 2}
   m_PrefabInternal: {fileID: 1372399988}
+--- !u!114 &464434521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114234705300635922, guid: 004b8a8193c4f4ff28e0a132018c3102,
+    type: 2}
+  m_PrefabInternal: {fileID: 581000617}
+  m_Script: {fileID: 11500000, guid: 6d925ac8856f94cbe8815711e2e4e9f0, type: 3}
 --- !u!1 &465307687
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04afce83049094a3e8bf86e32bbd65c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 464434521}
 --- !u!4 &1763210160
 Transform:
   m_ObjectHideFlags: 0

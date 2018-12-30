@@ -14,6 +14,7 @@ using UnityEngine.UI;
  */
 public class IntermissionController : MonoBehaviour
 {
+    public Fader fader;
     public TextTypewriterEffect levelNameText;
     public Text levelDescriptionTextBox;
     public FakeLoadingBar loadingBar;
@@ -34,7 +35,7 @@ public class IntermissionController : MonoBehaviour
     void Start()
     {
         GetComponent<NextSceneController>().SetNextSceneParameters();
-        Fader.Instance.FadeOutAfterDelay(nextLevelIndex, loadingBar.duration);
+        fader.FadeOutAfterDelay(nextLevelIndex, loadingBar.duration);
     }
 }
 

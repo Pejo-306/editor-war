@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelSceneController : MonoBehaviour
 {
+    public Fader fader;
     public string levelIndexParameterKey = "Level Index";
 
     public void ChangeScene(string nextSceneName)
@@ -13,7 +14,7 @@ public class LevelSceneController : MonoBehaviour
         nextSceneController.SetParameter(levelIndexParameterKey, 
                 SceneManager.GetActiveScene().buildIndex.ToString());
         nextSceneController.SetNextSceneParameters();
-        Fader.Instance.FadeOutOfLevel(nextScene);
+        fader.FadeOutOfLevel(nextScene);
     }
 }
 

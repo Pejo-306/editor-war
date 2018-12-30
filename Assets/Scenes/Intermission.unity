@@ -315,6 +315,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004b8a8193c4f4ff28e0a132018c3102, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &332048651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114234705300635922, guid: 004b8a8193c4f4ff28e0a132018c3102,
+    type: 2}
+  m_PrefabInternal: {fileID: 332048650}
+  m_Script: {fileID: 11500000, guid: 6d925ac8856f94cbe8815711e2e4e9f0, type: 3}
 --- !u!1001 &864802850
 Prefab:
   m_ObjectHideFlags: 0
@@ -988,7 +994,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4603711515852630, guid: 9bcdd010ea5fe4d0fa93cd14d1a33b94, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bcdd010ea5fe4d0fa93cd14d1a33b94, type: 2}
@@ -1022,6 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed6c7d60b0084c88b8e6ef532935ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 332048651}
   levelNameText: {fileID: 1342474671}
   levelDescriptionTextBox: {fileID: 1165498000}
   loadingBar: {fileID: 1649199102}
@@ -1036,7 +1043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2029964565
 MonoBehaviour:

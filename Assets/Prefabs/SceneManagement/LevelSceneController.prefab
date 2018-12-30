@@ -64,3 +64,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ae369f0739f48b78c07549f6059f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fader: {fileID: 0}
+  levelIndexParameterKey: Level Index

@@ -2,11 +2,13 @@
 
 public class MainMenuController : MonoBehaviour 
 {
+    public Fader fader;
+
     public void StartGame(string firstLevelSceneName)
     {
         PersistantGameManager.Instance.Reset();
         GetComponent<NextSceneController>().SetNextSceneParameters();
-        Fader.Instance.FadeOutOfLevel(SceneLoader.GetScenePath(firstLevelSceneName));
+        fader.FadeOutOfLevel(SceneLoader.GetScenePath(firstLevelSceneName));
     }
 
     public void QuitGame()
