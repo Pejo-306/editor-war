@@ -9,10 +9,6 @@ public class ContinueScreenController : MonoBehaviour
 {
     public void Continue()
     {
-        foreach (var param in SceneLoader.Instance.GetSceneParameters())
-        {
-            Debug.Log("key: " + param.Key + " value: " + param.Value);
-        }
         int levelIndex = Int32.Parse(SceneLoader.Instance.GetParameter("Level Index"));
 
         Fader.Instance.FadeOutOfLevel(levelIndex);
@@ -20,9 +16,7 @@ public class ContinueScreenController : MonoBehaviour
 
     public void GiveUp(string nextSceneName)
     {
-        string scene = SceneLoader.scenesPath + nextSceneName;
-
-        Fader.Instance.FadeOutOfLevel(scene);
+        Fader.Instance.FadeOutOfLevel(SceneLoader.GetScenePath(nextSceneName));
     }
 }
 
