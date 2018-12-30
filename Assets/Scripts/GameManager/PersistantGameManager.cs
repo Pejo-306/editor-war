@@ -7,6 +7,7 @@ public class PersistantGameManager : MonoBehaviour
     public int continues = 3;
     public string continueSceneName = "Continue";
     public string gameOverSceneName = "GameOver";
+    private int leftoverContinues;
 
     void Awake()
     {
@@ -14,6 +15,7 @@ public class PersistantGameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            Initialize();
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -24,16 +26,31 @@ public class PersistantGameManager : MonoBehaviour
 
     public void GameOver()
     {
-        string nextSceneName = (continues > 0) ? continueSceneName : gameOverSceneName;
+        string nextSceneName = (leftoverContinues > 0) ? continueSceneName : gameOverSceneName;
         var levelSceneController = (LevelSceneController)FindObjectOfType(
                 typeof(LevelSceneController));
 
         levelSceneController.ChangeScene(nextSceneName);
     }
 
+    public void Reset()
+    {
+        leftoverContinues = continues;
+    }
+
+    public int GetLeftoverContinues()
+    {
+        return leftoverContinues;
+    }
+
     public void UseContinue()
     {
-        continues--;
+        leftoverContinues--;
+    }
+
+    private void Initialize()
+    {
+        leftoverContinues = continues;
     }
 }
 

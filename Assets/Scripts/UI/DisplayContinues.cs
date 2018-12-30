@@ -9,7 +9,7 @@ public class DisplayContinues : MonoBehaviour
     void Awake()
     {
         string textToDisplay = textBox.text.Replace(continuesPlaceholderString,
-                PersistantGameManager.Instance.continues.ToString());
+                PersistantGameManager.Instance.GetLeftoverContinues().ToString());
 
         textBox.text = textToDisplay;
     }
