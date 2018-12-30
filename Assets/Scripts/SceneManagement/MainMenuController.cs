@@ -2,11 +2,9 @@
 
 public class MainMenuController : MonoBehaviour 
 {
-    private static string scenePath = "Scenes/";
-
     public void StartGame(string firstLevelSceneName)
     {
-        string scene = scenePath + firstLevelSceneName;
+        string scene = SceneLoader.scenesPath + firstLevelSceneName;
 
         Fader.Instance.FadeOutOfLevel(scene);
     }
