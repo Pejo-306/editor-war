@@ -4,6 +4,8 @@ public class PersistantGameManager : MonoBehaviour
 {
     public static PersistantGameManager Instance { get; private set; }
 
+    public int continues = 3;
+
     void Awake()
     {
         // singleton pattern
