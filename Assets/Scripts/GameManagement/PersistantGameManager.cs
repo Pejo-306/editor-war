@@ -24,13 +24,24 @@ public class PersistantGameManager : MonoBehaviour
 
     public void GameOver()
     {
+        var player = GameObject.FindWithTag("Player");
         var levelSceneController = (LevelSceneController)FindObjectOfType(
                 typeof(LevelSceneController));
         var nextSceneController = levelSceneController.GetComponent<NextSceneController>();
-        string nextSceneName = (leftoverContinues > 0) ? SceneManagementConstants.continueSceneName 
-            : SceneManagementConstants.gameOverSceneName;
+        string playerPosition = string.Format("{0:n3},{1:n3}", 
+                player.transform.position.x, player.transform.position.y);
+        string nextSceneName;
 
+        if (leftoverContinues > 0)
+        {
+            nextSceneName = SceneManagementConstants.continueSceneName;
+        }
+        else
+        {
+            nextSceneName = SceneManagementConstants.gameOverSceneName;
+        }
         nextSceneController.SetParameter("Next Scene", nextSceneName);
+        nextSceneController.SetParameter("Player Position", playerPosition);
         levelSceneController.ChangeScene(SceneManagementConstants.playerDeathSceneName);
     }
 
