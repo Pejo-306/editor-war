@@ -8,22 +8,12 @@ public class TestPlayerDeathAnimation : MonoBehaviour
 
     void OnEnable()
     {
+        string testName = GetType().Name;
         string positionString = string.Format("{0:n3},{1:n3}", playerPosition.x, playerPosition.y);
 
-        SetSceneParameter("Next Scene", nextSceneName);
-        SetSceneParameter("Level Index", levelIndex.ToString());
-        SetSceneParameter("Player Position", positionString);
-    }
-
-    private void SetSceneParameter(string paramKey, string paramValue)
-    {
-        var sceneLoader = (SceneLoader)FindObjectOfType(typeof(SceneLoader));
-        string message = string.Format(
-                "TestPlayerDeathAnimation: Setting parameter '{0}' to '{1}'",
-                paramKey, paramValue);
-
-        Debug.Log(message);
-        sceneLoader.SetParameter(paramKey, paramValue);
+        TestingStatics.SetSceneParameter(testName, "Next Scene", nextSceneName);
+        TestingStatics.SetSceneParameter(testName, "Level Index", levelIndex.ToString());
+        TestingStatics.SetSceneParameter(testName, "Player Position", positionString);
     }
 }
 

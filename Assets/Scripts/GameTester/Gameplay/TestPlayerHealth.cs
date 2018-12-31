@@ -11,17 +11,17 @@ public class TestPlayerHealth : MonoBehaviour
 
         if (player == null)
         {
-            message = "TestPlayerHealth: no player provided";    
+            message = "no player provided";    
         }
         else if (player.GetComponent<PlayerHealth>() == null)
         {
-            message = "TestPlayerHealth: PlayerHealth component isn't attached to 'player'";    
+            message = "PlayerHealth component isn't attached to 'player'";    
         }
         else
         {
-            message = "TestPlayerHealth: OK";
+            message = "OK";
         }
-        Debug.Log(message);
+        TestingStatics.DebugMessage(GetType().Name, message);
     }
 
     void Update()

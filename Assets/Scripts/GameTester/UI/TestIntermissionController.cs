@@ -9,21 +9,12 @@ public class TestIntermissionController : MonoBehaviour
 
 	void OnEnable()
     {
-        SetSceneParameter("Level Name", levelName);
-        SetSceneParameter("Level Description", levelDescription);
-        SetSceneParameter("Loading Duration", loadingDuration.ToString());
-        SetSceneParameter("Level Index", nextLevelIndex.ToString());
+        string testName = GetType().Name;
+
+        TestingStatics.SetSceneParameter(testName, "Level Name", levelName);
+        TestingStatics.SetSceneParameter(testName, "Level Description", levelDescription);
+        TestingStatics.SetSceneParameter(testName, "Loading Duration", loadingDuration.ToString());
+        TestingStatics.SetSceneParameter(testName, "Level Index", nextLevelIndex.ToString());
 	}
-
-    private void SetSceneParameter(string paramKey, string paramValue)
-    {
-        SceneLoader sceneLoader = (SceneLoader)FindObjectOfType(typeof(SceneLoader));
-        string message = string.Format(
-                "TestIntermissionController: Setting parameter '{0}' to '{1}'",
-                paramKey, paramValue);
-
-        Debug.Log(message);
-        sceneLoader.SetParameter(paramKey, paramValue);
-    }
 }
 
