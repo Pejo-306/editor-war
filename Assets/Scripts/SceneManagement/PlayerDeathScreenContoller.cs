@@ -8,8 +8,7 @@ public class PlayerDeathScreenContoller : MonoBehaviour
     void OnEnable()
     {
         var nextSceneController = GetComponent<NextSceneController>();
-        string nextSceneName = SceneLoader.Instance.GetParameter(
-                PersistantGameManager.nextSceneParameterKey);
+        string nextSceneName = SceneLoader.Instance.GetParameter("Next Scene");
 
         nextSceneController.SetParameter("Level Index", 
                 SceneLoader.Instance.GetParameter("Level Index"));

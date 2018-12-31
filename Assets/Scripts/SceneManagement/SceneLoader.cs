@@ -16,7 +16,6 @@ public class SceneLoader : MonoBehaviour
     }
 
     public static SceneLoader Instance { get; private set; }
-    public const string scenesPath = "Scenes/";
 
     private Dictionary<string, string> parameters;
 
@@ -36,7 +35,7 @@ public class SceneLoader : MonoBehaviour
 
     public static string GetScenePath(string sceneName)
     {
-        return scenesPath + sceneName;
+        return SceneManagementConstants.scenesPath + sceneName;
     }
 
     public void Load(string sceneName)

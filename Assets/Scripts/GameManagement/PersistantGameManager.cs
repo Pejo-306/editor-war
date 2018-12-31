@@ -3,12 +3,8 @@
 public class PersistantGameManager : MonoBehaviour 
 {
     public static PersistantGameManager Instance { get; private set; }
-    public const string nextSceneParameterKey = "Next Scene";
 
     public int continues = 3;
-    public string playerDeathSceneName = "PlayerDeath";
-    public string continueSceneName = "Continue";
-    public string gameOverSceneName = "GameOver";
     private int leftoverContinues;
 
     void Awake()
@@ -28,13 +24,14 @@ public class PersistantGameManager : MonoBehaviour
 
     public void GameOver()
     {
-        string nextSceneName = (leftoverContinues > 0) ? continueSceneName : gameOverSceneName;
         var levelSceneController = (LevelSceneController)FindObjectOfType(
                 typeof(LevelSceneController));
         var nextSceneController = levelSceneController.GetComponent<NextSceneController>();
+        string nextSceneName = (leftoverContinues > 0) ? SceneManagementConstants.continueSceneName 
+            : SceneManagementConstants.gameOverSceneName;
 
-        nextSceneController.SetParameter(nextSceneParameterKey, nextSceneName);
-        levelSceneController.ChangeScene(playerDeathSceneName);
+        nextSceneController.SetParameter("Next Scene", nextSceneName);
+        levelSceneController.ChangeScene(SceneManagementConstants.playerDeathSceneName);
     }
 
     public void Reset()
