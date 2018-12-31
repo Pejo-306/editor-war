@@ -3,8 +3,10 @@
 public class PersistantGameManager : MonoBehaviour 
 {
     public static PersistantGameManager Instance { get; private set; }
+    public const string nextSceneParameterKey = "Next Scene";
 
     public int continues = 3;
+    public string playerDeathSceneName = "PlayerDeath";
     public string continueSceneName = "Continue";
     public string gameOverSceneName = "GameOver";
     private int leftoverContinues;
@@ -29,8 +31,10 @@ public class PersistantGameManager : MonoBehaviour
         string nextSceneName = (leftoverContinues > 0) ? continueSceneName : gameOverSceneName;
         var levelSceneController = (LevelSceneController)FindObjectOfType(
                 typeof(LevelSceneController));
+        var nextSceneController = levelSceneController.GetComponent<NextSceneController>();
 
-        levelSceneController.ChangeScene(nextSceneName);
+        nextSceneController.SetParameter(nextSceneParameterKey, nextSceneName);
+        levelSceneController.ChangeScene(playerDeathSceneName);
     }
 
     public void Reset()
