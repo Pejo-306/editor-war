@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61983837914117512}
   - component: {fileID: 50782515651187882}
   - component: {fileID: 114953359466588576}
+  - component: {fileID: 114350733350111286}
   m_Layer: 8
   m_Name: PlayerProjectile
   m_TagString: Untagged
@@ -88,6 +89,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 1.28}
   m_EdgeRadius: 0
+--- !u!114 &114350733350111286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307160787338656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81e49c98f0bf426ea16ad1e506401d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  tagToHit: Boss
 --- !u!114 &114953359466588576
 MonoBehaviour:
   m_ObjectHideFlags: 1
