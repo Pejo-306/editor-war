@@ -214,7 +214,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452563642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eebd3638df2e415385b2429e107377e, type: 3}
   m_Name: 
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452563642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d720cda2e2a24000adeb1611bf2c5bf, type: 3}
   m_Name: 
@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 932919151}
   - component: {fileID: 932919150}
   - component: {fileID: 932919149}
+  - component: {fileID: 932919153}
   m_Layer: 0
   m_Name: Vi
   m_TagString: Boss
@@ -660,6 +661,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &932919153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932919146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9696cb31579ac46639ede33c55d7dc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementRate: 2
+  motionUnit: 0.5
+  minMotionCount: 1
+  maxMotionCount: 3
 --- !u!1001 &962196416
 Prefab:
   m_ObjectHideFlags: 0
