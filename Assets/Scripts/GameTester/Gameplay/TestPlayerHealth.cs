@@ -3,6 +3,8 @@
 public class TestPlayerHealth : MonoBehaviour 
 {
     public GameObject player;
+    public int damage = 1;
+    public float delayTime = 1f;
     private bool isInvoked = false;
 
     void Start()
@@ -28,14 +30,15 @@ public class TestPlayerHealth : MonoBehaviour
     {
         if (!isInvoked)
         {
-            Invoke("DamagePlayer", 1);
+            Invoke("DamagePlayer", delayTime);
             isInvoked = true;
         }
     }
 
     private void DamagePlayer()
     {
-        player.GetComponent<PlayerHealth>().Damage();
+        TestingStatics.DebugMessage(GetType().Name, "Damaging Player");
+        player.GetComponent<PlayerHealth>().Damage(damage);
         isInvoked = false;
     }
 }

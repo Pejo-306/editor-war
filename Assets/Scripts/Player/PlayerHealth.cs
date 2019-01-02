@@ -18,11 +18,8 @@ public class PlayerHealth : MonoBehaviour
         {
             health -= damage;
 
-            Debug.Log("Player health: " + health);
             if (health <= 0)
             {
-                // TODO: game should end here
-                Debug.Log("Player is dead");
                 PersistantGameManager.Instance.GameOver();
             }
             else
@@ -33,16 +30,11 @@ public class PlayerHealth : MonoBehaviour
                 spriteFlasher.Invoke("StopFlashing", invincibilityTime);
             }
         }
-        else
-        {
-            Debug.Log("Player is invincible");
-        }
     }
 
     private void RemoveInvincibility()
     {
         isInvincible = false;
-        Debug.Log("Player is not invincible");
     }
 }
 
