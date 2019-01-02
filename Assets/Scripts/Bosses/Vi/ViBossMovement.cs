@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ViBossMovement : MonoBehaviour
 {
-    private class Movement 
+    public class Movement 
     {
         public enum Motion : byte { Left, Down, Up, Right };
 
@@ -15,23 +15,26 @@ public class ViBossMovement : MonoBehaviour
             { Motion.Right, new Vector3(1, 0, 0) }
         };
 
-        public Transform objectTransform;
         public Motion motion;
         public int count;
 
-        public Movement(Transform objectTransform, int minCount, int maxCount)
+        public Movement(int minCount, int maxCount)
         {
-            this.objectTransform = objectTransform;
             motion = PickRandomMotion();
             count = Random.Range(minCount, maxCount + 1);
         }
 
-        public void Execute(float motionUnit)
+        public void Execute(Transform objectTransform, float motionUnit)
         {
             objectTransform.position += motionOffsets[motion] * motionUnit * count;
         }
 
-        private static Motion PickRandomMotion()
+        public void ExecuteOpposite(Transform objectTransform, float motionUnit)
+        {
+            objectTransform.position -= motionOffsets[motion] * motionUnit * count;
+        }
+
+        public static Motion PickRandomMotion()
         {
             System.Random random = new System.Random();
             System.Array values = System.Enum.GetValues(typeof(Motion));
@@ -41,10 +44,12 @@ public class ViBossMovement : MonoBehaviour
         }
     }
 
+    public ViBossMovementTester movementTester;
     public float movementRate = 2f;
     public float motionUnit = 0.5f;
     public int minMotionCount = 1;
     public int maxMotionCount = 3;
+    public Movement nextMovement;
     private float movementPeriod;
     private bool isInMotion;
 
@@ -69,9 +74,12 @@ public class ViBossMovement : MonoBehaviour
 
     private void Move()
     {
-        Movement movement = new Movement(transform, minMotionCount, maxMotionCount);
-
-        movement.Execute(motionUnit);
+        if (nextMovement != null)
+        {
+            nextMovement.Execute(transform, motionUnit);
+        }
+        nextMovement = new Movement(minMotionCount, maxMotionCount);
+        movementTester.ApplyMovement();
     }
 
     private void ResetMotion()
