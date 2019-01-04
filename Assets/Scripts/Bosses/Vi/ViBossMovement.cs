@@ -49,6 +49,7 @@ public class ViBossMovement : MonoBehaviour
     public float motionUnit = 0.5f;
     public int minMotionCount = 1;
     public int maxMotionCount = 3;
+    [HideInInspector]
     public Movement nextMovement;
     private float movementPeriod;
     private bool isInMotion;
