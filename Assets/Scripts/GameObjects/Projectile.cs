@@ -4,6 +4,8 @@ public class Projectile : MonoBehaviour
 {
     public float duration = 2f;
     public float velocity = 15f;
+    [HideInInspector]
+    public Vector2 direction;
 
     private Rigidbody2D rb2D;
 
@@ -15,7 +17,7 @@ public class Projectile : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 relativeOffset = transform.up * velocity * Time.fixedDeltaTime;
+        Vector2 relativeOffset = direction * velocity * Time.fixedDeltaTime;
 
         rb2D.MovePosition(rb2D.position + relativeOffset);
     }

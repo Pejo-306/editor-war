@@ -8,17 +8,17 @@ public class Weapon : MonoBehaviour
     public GameObject target;
 
     private float nextShotTime;
+    private Vector2 projectileDirection = new Vector2(0, 1);
 
     void FixedUpdate()
     {
         float rotZ;
-        Vector3 direction;
 
         if (target != null)
         {
-            direction = target.transform.position - spawnPosition.position;
-            rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            spawnPosition.rotation = Quaternion.Euler(0f, 0f, rotZ - 90);
+            projectileDirection = target.transform.position - spawnPosition.position;
+            rotZ = Mathf.Atan2(projectileDirection.y, projectileDirection.x) * Mathf.Rad2Deg;
+            projectileDirection = Quaternion.Euler(0f, 0f, rotZ - 90) * transform.up;
         }
     }
 
@@ -31,6 +31,7 @@ public class Weapon : MonoBehaviour
         {
             newProjectile = Instantiate(projectile, spawnPosition.position, 
                     spawnPosition.rotation);
+            newProjectile.GetComponent<Projectile>().direction = projectileDirection;
             Physics2D.IgnoreCollision(newProjectile.GetComponent<Collider2D>(),
                     GetComponent<Collider2D>());
             nextShotTime = Time.time + cooldown;
