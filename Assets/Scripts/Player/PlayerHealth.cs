@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour 
 {
@@ -30,6 +31,11 @@ public class PlayerHealth : MonoBehaviour
                 spriteFlasher.Invoke("StopFlashing", invincibilityTime);
             }
         }
+    }
+
+    public void ComponentReceiveHit(Dictionary<string, object> parameters)
+    {
+        Damage((int)parameters["damage"]);
     }
 
     private void RemoveInvincibility()

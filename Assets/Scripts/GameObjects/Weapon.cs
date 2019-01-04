@@ -2,7 +2,7 @@
 
 public class Weapon : MonoBehaviour
 {
-    public int shotsPerSecond = 10;
+    public float shotsPerSecond = 10f;
     public GameObject projectile;
     public Transform spawnPosition;
     public GameObject target;
@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        float cooldown = 1 / (float)shotsPerSecond;
+        float cooldown = 1 / shotsPerSecond;
         GameObject newProjectile;
 
         if (Time.time > nextShotTime)
