@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public Transform spawnPosition;
     public GameObject target;
 
-    private float nextShotTime;
+    private float nextShotTime = 0f;
     private Vector2 projectileDirection = new Vector2(0, 1);
 
     void FixedUpdate()
@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public virtual GameObject Shoot()
     {
         float cooldown = 1 / shotsPerSecond;
         GameObject projectile;
@@ -36,7 +36,9 @@ public class Weapon : MonoBehaviour
             Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(),
                     shooter.GetComponent<Collider2D>());
             nextShotTime = Time.time + cooldown;
+            return projectile;
         }
+        return null;
     }
 }
 

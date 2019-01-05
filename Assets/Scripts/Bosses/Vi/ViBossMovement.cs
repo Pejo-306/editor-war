@@ -34,6 +34,11 @@ public class ViBossMovement : MonoBehaviour
             objectTransform.position -= motionOffsets[motion] * motionUnit * count;
         }
 
+        public override string ToString()
+        {
+            return string.Format("{0}{1}", count, GetMotionAsString(motion));
+        }
+
         public static Motion PickRandomMotion()
         {
             System.Random random = new System.Random();
@@ -41,6 +46,22 @@ public class ViBossMovement : MonoBehaviour
             Motion randomMotion = (Motion)values.GetValue(random.Next(values.Length));
 
             return randomMotion;
+        }
+
+        public static string GetMotionAsString(Motion motion)
+        {
+            switch (motion)
+            {
+                case Motion.Left:
+                    return "h";
+                case Motion.Down:
+                    return "j";
+                case Motion.Up:
+                    return "k";
+                case Motion.Right:
+                    return "l";
+            }
+            return null;
         }
     }
 
@@ -51,6 +72,7 @@ public class ViBossMovement : MonoBehaviour
     public int maxMotionCount = 3;
     [HideInInspector]
     public Movement nextMovement;
+
     private float movementPeriod;
     private bool isInMotion;
 

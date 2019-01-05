@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636938749285494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -318.23093, y: 609.6791, z: 5.2087226}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224464880338699316}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95893629116518166}
   fadeIn: 1
-  fadeOut: 1
+  fadeOut: 0
 --- !u!114 &114499238076986556
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -59,6 +59,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1665053966676744
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4466467268067352}
+  - component: {fileID: 114676563770944652}
+  - component: {fileID: 114917023053026970}
+  m_Layer: 0
+  m_Name: ViMotionProjectileShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1672444050312532
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +140,19 @@ Transform:
   m_Father: {fileID: 4727456200736474}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4466467268067352
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665053966676744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4652497372605144}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4554133340805698
 Transform:
   m_ObjectHideFlags: 1
@@ -148,6 +178,7 @@ Transform:
   m_Children:
   - {fileID: 4391335576938926}
   - {fileID: 4554133340805698}
+  - {fileID: 4466467268067352}
   m_Father: {fileID: 4727456200736474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -327,6 +358,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vi: {fileID: 114403161543776084}
   movementField: {fileID: 0}
+--- !u!114 &114676563770944652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665053966676744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d05fec025544619955a7fc6031b1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotsPerSecond: 8
+  shooter: {fileID: 1672444050312532}
+  projectilePrefab: {fileID: 1506119559772430, guid: 7be73bbd3c4a14311bd86c1dfc735ee4,
+    type: 2}
+  spawnPosition: {fileID: 4391335576938926}
+  target: {fileID: 0}
+  minCount: 1
+  maxCount: 3
+  motionUnit: 0.5
+--- !u!114 &114917023053026970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665053966676744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2030148cc41744b719b71e65209fc306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114676563770944652}
 --- !u!114 &114976456005773174
 MonoBehaviour:
   m_ObjectHideFlags: 1
