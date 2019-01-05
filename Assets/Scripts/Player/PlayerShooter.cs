@@ -2,13 +2,8 @@
 
 public class PlayerShooter : MonoBehaviour
 {
-    private Weapon weapon;
+    public Weapon weapon;
 
-	void Start()
-    {
-        weapon = GetComponent<Weapon>();	
-	}
-	
 	void Update()
     {
 	    if (Input.GetButton("Fire"))

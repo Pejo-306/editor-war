@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
 
-public class ViBossShooter : MonoBehaviour
+public class ViBasicDamageProjectileShooter : MonoBehaviour
 {
-    private Weapon weapon;
+    public Weapon weapon;
+
     private bool isShooting;
 
-	void Start()
+    void Start()
     {
-		weapon = GetComponent<Weapon>();
         isShooting = false;
-	}
-	
-	void Update()
+    }
+
+    void Update()
     {
-	    if (!isShooting)
+        if (!isShooting)
         {
             weapon.Shoot();
             Invoke("Cooldown", 1 / weapon.shotsPerSecond);
             isShooting = true;
         }
-	}
+    }
 
     private void Cooldown()
     {

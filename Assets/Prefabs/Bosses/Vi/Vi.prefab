@@ -73,11 +73,26 @@ GameObject:
   - component: {fileID: 114351260774604184}
   - component: {fileID: 114066003804444352}
   - component: {fileID: 114403161543776084}
-  - component: {fileID: 114312399407381346}
-  - component: {fileID: 114972672583000164}
   m_Layer: 0
   m_Name: ViEntity
   m_TagString: Boss
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1702213530730014
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4554133340805698}
+  - component: {fileID: 114052584005029746}
+  - component: {fileID: 114976456005773174}
+  m_Layer: 0
+  m_Name: ViBasicDamageProjectileShooter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521218870564568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4652497372605144}
@@ -108,6 +123,19 @@ Transform:
   m_Father: {fileID: 4727456200736474}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4554133340805698
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702213530730014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4652497372605144}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4652497372605144
 Transform:
   m_ObjectHideFlags: 1
@@ -119,6 +147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4391335576938926}
+  - {fileID: 4554133340805698}
   m_Father: {fileID: 4727456200736474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,6 +256,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!114 &114052584005029746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702213530730014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46842541f198b4283bba81c225b516f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotsPerSecond: 4
+  shooter: {fileID: 1672444050312532}
+  projectilePrefab: {fileID: 1445398899321174, guid: 60d89ecd6b01b4e2c9dbcc6c6d12bf88,
+    type: 2}
+  spawnPosition: {fileID: 4391335576938926}
+  target: {fileID: 0}
 --- !u!114 &114066003804444352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,21 +286,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   affectedComponent: {fileID: 114351260774604184}
   calledMethodParameters: []
---- !u!114 &114312399407381346
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672444050312532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46842541f198b4283bba81c225b516f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shotsPerSecond: 4
-  projectile: {fileID: 1445398899321174, guid: 60d89ecd6b01b4e2c9dbcc6c6d12bf88, type: 2}
-  spawnPosition: {fileID: 4391335576938926}
-  target: {fileID: 0}
 --- !u!114 &114351260774604184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,17 +327,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vi: {fileID: 114403161543776084}
   movementField: {fileID: 0}
---- !u!114 &114972672583000164
+--- !u!114 &114976456005773174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672444050312532}
+  m_GameObject: {fileID: 1702213530730014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6217ef4ee2f404b1c8ccd5cde5f5bf41, type: 3}
+  m_Script: {fileID: 11500000, guid: 2543b7277b15b4c60a4b27cd97dd569b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 114052584005029746}
 --- !u!212 &212633339725106928
 SpriteRenderer:
   m_ObjectHideFlags: 1

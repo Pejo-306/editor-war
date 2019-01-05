@@ -3,7 +3,8 @@
 public class Weapon : MonoBehaviour
 {
     public float shotsPerSecond = 10f;
-    public GameObject projectile;
+    public GameObject shooter;
+    public GameObject projectilePrefab;
     public Transform spawnPosition;
     public GameObject target;
 
@@ -18,22 +19,22 @@ public class Weapon : MonoBehaviour
         {
             projectileDirection = target.transform.position - spawnPosition.position;
             rotZ = Mathf.Atan2(projectileDirection.y, projectileDirection.x) * Mathf.Rad2Deg;
-            projectileDirection = Quaternion.Euler(0f, 0f, rotZ - 90) * transform.up;
+            projectileDirection = Quaternion.Euler(0f, 0f, rotZ - 90) * spawnPosition.up;
         }
     }
 
     public void Shoot()
     {
         float cooldown = 1 / shotsPerSecond;
-        GameObject newProjectile;
+        GameObject projectile;
 
         if (Time.time > nextShotTime)
         {
-            newProjectile = Instantiate(projectile, spawnPosition.position, 
+            projectile = Instantiate(projectilePrefab, spawnPosition.position, 
                     spawnPosition.rotation);
-            newProjectile.GetComponent<Projectile>().direction = projectileDirection;
-            Physics2D.IgnoreCollision(newProjectile.GetComponent<Collider2D>(),
-                    GetComponent<Collider2D>());
+            projectile.GetComponent<Projectile>().direction = projectileDirection;
+            Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(),
+                    shooter.GetComponent<Collider2D>());
             nextShotTime = Time.time + cooldown;
         }
     }

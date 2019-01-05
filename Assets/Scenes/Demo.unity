@@ -479,6 +479,15 @@ Prefab:
       propertyPath: m_Name
       value: LowerEdge
       objectReference: {fileID: 0}
+    - target: {fileID: 68880339959524800, guid: 650622e107d0847c191c846c797686ff,
+        type: 2}
+      propertyPath: m_Points.Array.data[2].x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778403440653150, guid: 650622e107d0847c191c846c797686ff, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 650622e107d0847c191c846c797686ff, type: 2}
   m_IsPrefabAsset: 0
@@ -634,7 +643,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114312399407381346, guid: e285746a9913445e28b51d2553de2a23,
+    - target: {fileID: 114052584005029746, guid: e285746a9913445e28b51d2553de2a23,
         type: 2}
       propertyPath: target
       value: 
