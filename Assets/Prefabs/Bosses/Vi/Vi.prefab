@@ -115,13 +115,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1977953472989750
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4944479630580594}
+  - component: {fileID: 114881828790720804}
+  - component: {fileID: 114787470778645476}
+  m_Layer: 0
+  m_Name: ViLineDamageProjectileShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4391335576938926
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521218870564568}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -180,6 +197,7 @@ Transform:
   - {fileID: 4391335576938926}
   - {fileID: 4554133340805698}
   - {fileID: 4466467268067352}
+  - {fileID: 4944479630580594}
   m_Father: {fileID: 4727456200736474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -197,6 +215,19 @@ Transform:
   - {fileID: 4402034179484976}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4944479630580594
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977953472989750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4652497372605144}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50378471230309346
 Rigidbody2D:
@@ -305,6 +336,7 @@ MonoBehaviour:
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
   target: {fileID: 0}
+  staticShootingAngle: 0
   randomArcAngle: 90
 --- !u!114 &114066003804444352
 MonoBehaviour:
@@ -333,6 +365,7 @@ MonoBehaviour:
   damage: 1
   tagToHit: Player
   destroyDamageDealer: 0
+  onTrigger: 0
 --- !u!114 &114351260774604184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,10 +424,42 @@ MonoBehaviour:
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
   target: {fileID: 0}
+  staticShootingAngle: 0
   randomArcAngle: 90
   minCount: 1
   maxCount: 3
   motionUnit: 0.5
+--- !u!114 &114787470778645476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977953472989750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf7bd55fc656482fb28ffbb08db99c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114881828790720804}
+--- !u!114 &114881828790720804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977953472989750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46842541f198b4283bba81c225b516f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotsPerSecond: 1
+  shooter: {fileID: 1672444050312532}
+  projectilePrefab: {fileID: 1976071186673842, guid: 0073ebfb51746442fa8b21a693e86171,
+    type: 2}
+  spawnPosition: {fileID: 4391335576938926}
+  target: {fileID: 0}
+  staticShootingAngle: -180
+  randomArcAngle: 0
 --- !u!114 &114917023053026970
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,23 +7,29 @@ public class Weapon : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform spawnPosition;
     public GameObject target;
+    public float staticShootingAngle = 0f;
     public float randomArcAngle = 0f;
 
     private float nextShotTime = 0f;
-    private Vector2 projectileDirection = new Vector2(0, 1);
+    private Vector2 projectileDirection;
 
     void FixedUpdate()
     {
         float rotZ;
-        float randomRotZ;
+        float randomRotZ = Random.Range(-(randomArcAngle / 2), randomArcAngle / 2);
+        Vector2 directionDifference;
 
         if (target != null)
         {
-            projectileDirection = target.transform.position - spawnPosition.position;
-            rotZ = Mathf.Atan2(projectileDirection.y, projectileDirection.x) * Mathf.Rad2Deg;
-            randomRotZ = Random.Range(-(randomArcAngle / 2), randomArcAngle / 2);
-            projectileDirection = Quaternion.Euler(0f, 0f, (rotZ - 90) + randomRotZ) * spawnPosition.up;
+            directionDifference = target.transform.position - spawnPosition.position;
+            rotZ = Mathf.Atan2(directionDifference.y, directionDifference.x) * Mathf.Rad2Deg;
+            rotZ -= 90;
         }
+        else
+        {
+            rotZ = staticShootingAngle;
+        }
+        projectileDirection = Quaternion.Euler(0f, 0f, rotZ + randomRotZ) * spawnPosition.up;
     }
 
     public virtual GameObject Shoot()

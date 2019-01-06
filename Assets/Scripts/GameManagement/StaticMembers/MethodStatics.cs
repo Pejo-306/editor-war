@@ -31,5 +31,15 @@ public class MethodStatics : MonoBehaviour
             }
         }
     }
+
+    public static float GetScreenHeight()
+    {
+        return Camera.main.orthographicSize * 2f;
+    }
+
+    public static float GetScreenWidth()
+    {
+        return Camera.main.orthographicSize * 2f * Screen.width / Screen.height;
+    }
 }
 

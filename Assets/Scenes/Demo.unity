@@ -337,7 +337,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114052584005029746, guid: e285746a9913445e28b51d2553de2a23,
+    - target: {fileID: 114676563770944652, guid: e285746a9913445e28b51d2553de2a23,
         type: 2}
       propertyPath: target
       value: 
@@ -347,7 +347,7 @@ Prefab:
       propertyPath: movementField
       value: 
       objectReference: {fileID: 180063327}
-    - target: {fileID: 114676563770944652, guid: e285746a9913445e28b51d2553de2a23,
+    - target: {fileID: 114052584005029746, guid: e285746a9913445e28b51d2553de2a23,
         type: 2}
       propertyPath: target
       value: 
