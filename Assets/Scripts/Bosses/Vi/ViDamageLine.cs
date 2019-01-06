@@ -12,13 +12,13 @@ public class ViDamageLine : MonoBehaviour
 
     private void CenterAndScaleDamageLine()
     {
-        float colliderCoefficient = GetComponent<BoxCollider2D>().size.x;
-        float width = MethodStatics.GetScreenWidth() / colliderCoefficient;
+        float colliderCoefficient = GetComponent<BoxCollider2D>().size.y;
+        float height = MethodStatics.GetScreenHeight() / colliderCoefficient;
         Vector2 centeredPosition = Vector2.zero;
 
-        centeredPosition.y = transform.position.y;
+        centeredPosition.x = transform.position.x;
         transform.position = centeredPosition;
-        transform.localScale = new Vector2(width, transform.localScale.y);
+        transform.localScale = new Vector2(transform.localScale.x, height);
     }
 }
 

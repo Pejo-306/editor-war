@@ -104,7 +104,7 @@ MonoBehaviour:
     type: 2}
   tagToHit: Player
   minTriggerDelayTime: 0.5
-  maxTriggerDelayTime: 2
+  maxTriggerDelayTime: 2.5
 --- !u!114 &114113853012123886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdd90de914cc4c07ae4601878e40324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2.5
-  velocity: 4
+  duration: 3
+  velocity: 6
   direction: {x: 0, y: 0}
 --- !u!212 &212843273685174782
 SpriteRenderer:
