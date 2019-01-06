@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform spawnPosition;
     public GameObject target;
+    public float randomArcAngle = 0f;
 
     private float nextShotTime = 0f;
     private Vector2 projectileDirection = new Vector2(0, 1);
@@ -14,12 +15,14 @@ public class Weapon : MonoBehaviour
     void FixedUpdate()
     {
         float rotZ;
+        float randomRotZ;
 
         if (target != null)
         {
             projectileDirection = target.transform.position - spawnPosition.position;
             rotZ = Mathf.Atan2(projectileDirection.y, projectileDirection.x) * Mathf.Rad2Deg;
-            projectileDirection = Quaternion.Euler(0f, 0f, rotZ - 90) * spawnPosition.up;
+            randomRotZ = Random.Range(-(randomArcAngle / 2), randomArcAngle / 2);
+            projectileDirection = Quaternion.Euler(0f, 0f, (rotZ - 90) + randomRotZ) * spawnPosition.up;
         }
     }
 
@@ -33,6 +36,7 @@ public class Weapon : MonoBehaviour
             projectile = Instantiate(projectilePrefab, spawnPosition.position, 
                     spawnPosition.rotation);
             projectile.GetComponent<Projectile>().direction = projectileDirection;
+
             Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(),
                     shooter.GetComponent<Collider2D>());
             nextShotTime = Time.time + cooldown;

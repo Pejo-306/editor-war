@@ -304,6 +304,7 @@ MonoBehaviour:
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
   target: {fileID: 0}
+  randomArcAngle: 90
 --- !u!114 &114066003804444352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -375,6 +376,7 @@ MonoBehaviour:
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
   target: {fileID: 0}
+  randomArcAngle: 90
   minCount: 1
   maxCount: 3
   motionUnit: 0.5
