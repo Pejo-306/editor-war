@@ -22,6 +22,14 @@ public class PersistantGameManager : MonoBehaviour
         }
     }
 
+    public void GameWin()
+    {
+        var levelSceneController = (LevelSceneController)FindObjectOfType(
+                typeof(LevelSceneController));
+
+        levelSceneController.ChangeScene(SceneManagementConstants.gameWinSceneName);
+    }
+
     public void GameOver()
     {
         var player = GameObject.FindWithTag("Player");
@@ -42,7 +50,7 @@ public class PersistantGameManager : MonoBehaviour
         }
         nextSceneController.SetParameter("Next Scene", nextSceneName);
         nextSceneController.SetParameter("Player Position", playerPosition);
-        levelSceneController.ChangeScene(SceneManagementConstants.playerDeathSceneName);
+        levelSceneController.ChangeScene(SceneManagementConstants.playerDeathSceneName, false);
     }
 
     public void Reset()
