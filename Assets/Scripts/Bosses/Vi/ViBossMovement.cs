@@ -66,7 +66,7 @@ public class ViBossMovement : MonoBehaviour
     }
 
     public ViBossMovementTester movementTester;
-    public float movementRate = 2f;
+    public float movementRate = 6f;
     public float motionUnit = 0.5f;
     public int minMotionCount = 1;
     public int maxMotionCount = 3;
