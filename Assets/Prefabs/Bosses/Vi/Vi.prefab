@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 114351260774604184}
   - component: {fileID: 114066003804444352}
   - component: {fileID: 114403161543776084}
+  - component: {fileID: 114223739615023152}
   m_Layer: 0
   m_Name: ViEntity
   m_TagString: Boss
@@ -318,6 +319,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   affectedComponent: {fileID: 114351260774604184}
   calledMethodParameters: []
+--- !u!114 &114223739615023152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672444050312532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81e49c98f0bf426ea16ad1e506401d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  tagToHit: Player
+  destroyDamageDealer: 0
 --- !u!114 &114351260774604184
 MonoBehaviour:
   m_ObjectHideFlags: 1
