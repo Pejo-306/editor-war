@@ -307,19 +307,6 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1636938749285494, guid: 004b8a8193c4f4ff28e0a132018c3102, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1502145472134332, guid: 004b8a8193c4f4ff28e0a132018c3102, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114499238076986556, guid: 004b8a8193c4f4ff28e0a132018c3102,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 004b8a8193c4f4ff28e0a132018c3102, type: 2}
   m_IsPrefabAsset: 0
@@ -623,7 +610,7 @@ GameObject:
   - component: {fileID: 1200018745}
   - component: {fileID: 1200018744}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainMenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 464434521}
-  firstLevelSceneName: Demo
+  firstLevelSceneName: Intermission
 --- !u!4 &1763210160
 Transform:
   m_ObjectHideFlags: 0
@@ -942,9 +929,10 @@ MonoBehaviour:
   - paramKey: Level Name
     paramValue: Demo
   - paramKey: Level Description
-    paramValue: Vi
+    paramValue: Vi - the ultimate console-based text editor. It is said that very
+      few can even exit the text editor.
   - paramKey: Loading Duration
-    paramValue: 0.5
+    paramValue: 0.1
 --- !u!1001 &1819910696
 Prefab:
   m_ObjectHideFlags: 0
