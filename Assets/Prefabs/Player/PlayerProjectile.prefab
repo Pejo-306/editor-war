@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   tagToHit: Boss
+  destroyDamageDealer: 1
 --- !u!114 &114953359466588576
 MonoBehaviour:
   m_ObjectHideFlags: 1
