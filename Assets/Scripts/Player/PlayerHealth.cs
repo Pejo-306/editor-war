@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour 
+public class PlayerHealth : EntityHealth 
 {
-    public int health = 4;
     public float invincibilityTime = 2f;  // in seconds
     public SpriteFlasher spriteFlasher;
     private bool isInvincible = false;
@@ -13,11 +12,11 @@ public class PlayerHealth : MonoBehaviour
         spriteFlasher = (spriteFlasher == null) ? GetComponent<SpriteFlasher>() : spriteFlasher;
     }
 
-    public void Damage(int damage = 1)
+    public override void Damage(int damage = 1)
     {
         if (!isInvincible)
         {
-            health -= damage;
+            base.Damage(damage);
 
             if (health <= 0)
             {
