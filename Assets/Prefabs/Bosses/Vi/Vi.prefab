@@ -37,6 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4727456200736474}
+  - component: {fileID: 95523514017723146}
   m_Layer: 0
   m_Name: Vi
   m_TagString: Untagged
@@ -92,6 +93,7 @@ GameObject:
   - component: {fileID: 114403161543776084}
   - component: {fileID: 114223739615023152}
   - component: {fileID: 114065862622110224}
+  - component: {fileID: 114903279384501386}
   m_Layer: 0
   m_Name: ViEntity
   m_TagString: Boss
@@ -209,7 +211,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153876142915120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 0}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4652497372605144}
@@ -320,6 +322,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!95 &95523514017723146
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153876142915120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a09f85c12c3434ac7b3f1942163b65a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114052584005029746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -478,6 +498,24 @@ MonoBehaviour:
   target: {fileID: 0}
   staticShootingAngle: 90
   randomArcAngle: 0
+--- !u!114 &114903279384501386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672444050312532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  componentsToDelay:
+  - {fileID: 114351260774604184}
+  - {fileID: 114066003804444352}
+  - {fileID: 114403161543776084}
+  - {fileID: 114223739615023152}
+  - {fileID: 114065862622110224}
 --- !u!114 &114917023053026970
 MonoBehaviour:
   m_ObjectHideFlags: 1
