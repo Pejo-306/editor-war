@@ -44,11 +44,11 @@ public class ViBehaviorPatterns : MonoBehaviour
         
         // basic damage projectiles
         viBasicDamageProjectileShooter.SetActive(true);
-        viBasicDamageProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 4;
+        viBasicDamageProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 6;
 
         // motion projectiles
         viMotionProjectileShooter.SetActive(true);
-        viMotionProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 8;
+        viMotionProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 12;
     }
 
     private void LineDamageProjectilesBarrage()

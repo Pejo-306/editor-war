@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdd90de914cc4c07ae4601878e40324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 1.5
-  velocity: 15
+  duration: 1
+  velocity: 30
   direction: {x: 0, y: 0}
   destructionVFX: {fileID: 1695458762653654, guid: c2b4f725c0633411e90dcaa73486dba9,
     type: 2}

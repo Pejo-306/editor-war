@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayedObject: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 1000
   maxWidth: 996
 --- !u!222 &222245727109624004
 CanvasRenderer:

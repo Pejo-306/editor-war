@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46842541f198b4283bba81c225b516f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotsPerSecond: 10
+  shotsPerSecond: 8
   shooter: {fileID: 1224589705877886}
   projectilePrefab: {fileID: 1307160787338656, guid: ab6b79732de0340a8b1bddd296371f84,
     type: 2}
