@@ -102,6 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   velocity: 10
+  direction: {x: 0, y: 0}
+  destructionVFX: {fileID: 1214079088390636, guid: e89fab7db49e7402dbd216989d2cde03,
+    type: 2}
+  destructionVFXDuration: 0.333333
 --- !u!114 &114637946251541592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   tagToHit: Player
+  destroyDamageDealer: 1
+  onTrigger: 0
 --- !u!212 &212878438688365346
 SpriteRenderer:
   m_ObjectHideFlags: 1
