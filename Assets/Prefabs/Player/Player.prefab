@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114247508872682720}
   - component: {fileID: 114869536455609988}
   - component: {fileID: 114896088974616772}
+  - component: {fileID: 114034347014003766}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -44,6 +45,7 @@ GameObject:
   - component: {fileID: 4166860179782194}
   - component: {fileID: 114135494548097952}
   - component: {fileID: 114332839965844758}
+  - component: {fileID: 114579579939473496}
   m_Layer: 0
   m_Name: PlayerShooter
   m_TagString: Untagged
@@ -99,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224589705877886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: 0}
+  m_LocalPosition: {x: -11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4112968038715062}
@@ -164,12 +166,28 @@ Animator:
   m_Controller: {fileID: 9100000, guid: a4bc1892f073d44e9b38dd4ebeb79eb9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114034347014003766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224589705877886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  componentsToDelay:
+  - {fileID: 114582560000604088}
+  - {fileID: 114247508872682720}
+  - {fileID: 114896088974616772}
 --- !u!114 &114135494548097952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +233,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 114135494548097952}
+--- !u!114 &114579579939473496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339792045202836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 592f0755a41df44a38ba9f7912c1b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  componentsToDelay:
+  - {fileID: 114332839965844758}
 --- !u!114 &114582560000604088
 MonoBehaviour:
   m_ObjectHideFlags: 1
