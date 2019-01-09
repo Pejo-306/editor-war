@@ -8,7 +8,7 @@ public class ViBossHealth : EntityHealth
         base.Damage(damage);
         if (health <= 0)
         {
-            PersistantGameManager.Instance.GameWin();
+            GetComponent<ViDeath>().PlayDeathAnimation();
         }
     }
 
