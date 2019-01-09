@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4839813005089462}
   - component: {fileID: 212843273685174782}
+  - component: {fileID: 95489927319392644}
   - component: {fileID: 61825305709021824}
   - component: {fileID: 50667415445325664}
   - component: {fileID: 114113853012123886}
@@ -89,6 +90,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.48}
   m_EdgeRadius: 0
+--- !u!95 &95489927319392644
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976071186673842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fae27e446a71b4bdca1365b924195053, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114085109051188188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,6 +124,8 @@ MonoBehaviour:
   tagToHit: Player
   minTriggerDelayTime: 0.5
   maxTriggerDelayTime: 2.5
+  animator: {fileID: 95489927319392644}
+  preDestructionVFXDuration: 0.5
 --- !u!114 &114113853012123886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +140,8 @@ MonoBehaviour:
   duration: 3
   velocity: 6
   direction: {x: 0, y: 0}
+  destructionVFX: {fileID: 0}
+  destructionVFXDuration: 0
 --- !u!212 &212843273685174782
 SpriteRenderer:
   m_ObjectHideFlags: 1
