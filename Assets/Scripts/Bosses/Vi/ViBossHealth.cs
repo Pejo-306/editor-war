@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ViBossHealth : EntityHealth 
 {
+    /*
     public override void Damage(int damage = 1)
     {
         base.Damage(damage);
@@ -10,6 +11,17 @@ public class ViBossHealth : EntityHealth
         {
             GetComponent<ViDeath>().PlayDeathAnimation();
         }
+    }
+    */
+
+    protected override void OnEntityDeath()
+    {
+
+    }
+
+    protected override void OnEntityHit()
+    {
+
     }
 
     public void ComponentReceiveHit(Dictionary<string, object> parameters)

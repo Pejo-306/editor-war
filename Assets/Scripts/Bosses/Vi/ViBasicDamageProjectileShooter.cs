@@ -2,6 +2,7 @@
 
 public class ViBasicDamageProjectileShooter : MonoBehaviour
 {
+    /*
     public Weapon weapon;
 
     private bool isShooting;
@@ -16,7 +17,7 @@ public class ViBasicDamageProjectileShooter : MonoBehaviour
         if (!isShooting)
         {
             weapon.Shoot();
-            Invoke("Cooldown", 1 / weapon.shotsPerSecond);
+            Invoke("Cooldown", 1 / weapon.ShotsPerSecond);
             isShooting = true;
         }
     }
@@ -25,5 +26,6 @@ public class ViBasicDamageProjectileShooter : MonoBehaviour
     {
         isShooting = false;
     }
+    */
 }
 

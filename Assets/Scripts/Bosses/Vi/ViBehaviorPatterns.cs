@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ViBehaviorPatterns : MonoBehaviour
 {
+    /*
     public ViBossMovement viMovementComponent;
     public GameObject viBasicDamageProjectileShooter;
     public GameObject viMotionProjectileShooter;
@@ -44,11 +45,11 @@ public class ViBehaviorPatterns : MonoBehaviour
         
         // basic damage projectiles
         viBasicDamageProjectileShooter.SetActive(true);
-        viBasicDamageProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 6;
+        viBasicDamageProjectileShooter.GetComponent<Weapon>().ShotsPerSecond = 6;
 
         // motion projectiles
         viMotionProjectileShooter.SetActive(true);
-        viMotionProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 12;
+        viMotionProjectileShooter.GetComponent<Weapon>().ShotsPerSecond = 12;
     }
 
     private void LineDamageProjectilesBarrage()
@@ -65,7 +66,7 @@ public class ViBehaviorPatterns : MonoBehaviour
     {
         // motion projectiles
         viMotionProjectileShooter.SetActive(true);
-        viMotionProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 24;
+        viMotionProjectileShooter.GetComponent<Weapon>().ShotsPerSecond = 24;
 
         // line damage projectiles
         viLineDamageProjectileShooter.SetActive(true);
@@ -75,7 +76,7 @@ public class ViBehaviorPatterns : MonoBehaviour
     {
         // basic damage projectiles
         viBasicDamageProjectileShooter.SetActive(true);
-        viBasicDamageProjectileShooter.GetComponent<Weapon>().shotsPerSecond = 24;
+        viBasicDamageProjectileShooter.GetComponent<Weapon>().ShotsPerSecond = 24;
     }
 
     private void ResetAfterPattern()
@@ -85,5 +86,6 @@ public class ViBehaviorPatterns : MonoBehaviour
         viMotionProjectileShooter.SetActive(false);
         viLineDamageProjectileShooter.SetActive(false);
     }
+    */
 }
 
