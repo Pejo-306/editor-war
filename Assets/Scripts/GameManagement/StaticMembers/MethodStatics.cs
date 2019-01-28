@@ -1,12 +1,16 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class MethodStatics : MonoBehaviour
+/*
+ * Define several static methods used throughout the project.
+ */
+public static class MethodStatics
 {
     [System.Serializable]
     public struct MethodParameter
     {
         public string name;
+
         public object val;
 
         public MethodParameter(string name, object val)

@@ -15,6 +15,8 @@ public class PersistantGameManager : MonoBehaviour
 
         public Sprite backgroundSprite;
 
+        public float delayBeforeDeath;
+
         public float delayAfterDeath;
     }
 
@@ -48,15 +50,18 @@ public class PersistantGameManager : MonoBehaviour
         var levelSceneController = (LevelSceneController)FindObjectOfType(
                 typeof(LevelSceneController));
 
-        levelSceneController.ChangeScene(SceneManagementConstants.gameWinSceneName);
+        levelSceneController.ChangeScene(ProjectPaths.gameWinSceneRPath);
     }
 
     public void GameOver()
     {
+        float delayBeforeSceneSwitch;
+
         if (!triggeredGameOver)
-        {
+        { 
+            delayBeforeSceneSwitch = gameOverOptions.delayBeforeDeath + gameOverOptions.delayAfterDeath;
             SetupPlayerDeathScene();
-            Invoke("SwitchToNextSceneAfterPlayerDeath", gameOverOptions.delayAfterDeath);
+            Invoke("SwitchToNextSceneAfterPlayerDeath", delayBeforeSceneSwitch);
             triggeredGameOver = true;
         }
     }
@@ -88,7 +93,7 @@ public class PersistantGameManager : MonoBehaviour
         var levelUI = GameObject.FindGameObjectsWithTag(gameOverOptions.levelUITag);
 
         // Play the player's death animation.
-        player.GetComponent<PlayerHealth>().PlayDeathAnimation();
+        player.GetComponent<PlayerHealth>().PlayDeathAnimation(gameOverOptions.delayBeforeDeath);
         player.GetComponent<ComponentController>()
             .DisableComponents(gameOverOptions.playerControlsGroupName);
 
@@ -105,8 +110,8 @@ public class PersistantGameManager : MonoBehaviour
     {
         var levelSceneController = (LevelSceneController)FindObjectOfType(
                 typeof(LevelSceneController));
-        string nextSceneName = (leftoverContinues > 0) ? SceneManagementConstants.continueSceneName 
-                                                       :  SceneManagementConstants.gameOverSceneName;
+        string nextSceneName = (leftoverContinues > 0) ? ProjectPaths.continueSceneRPath
+                                                       : ProjectPaths.gameOverSceneRPath;
 
         triggeredGameOver = false;
         levelSceneController.ChangeScene(nextSceneName);

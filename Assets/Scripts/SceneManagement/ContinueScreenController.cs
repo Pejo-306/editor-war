@@ -17,9 +17,9 @@ public class ContinueScreenController : MonoBehaviour
         fader.FadeOutOfLevel(levelIndex);
     }
 
-    public void GiveUp(string nextSceneName)
+    public void GiveUp(string nextScenePath)
     {
-        fader.FadeOutOfLevel(SceneLoader.GetScenePath(nextSceneName));
+        fader.FadeOutOfLevel(nextScenePath);
     }
 }
 

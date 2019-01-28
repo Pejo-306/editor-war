@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /*
@@ -19,8 +20,8 @@ public class PlayerHealth : EntityHealth
      */
     public void PlayDeathAnimation(float delay = 1f)
     {
-        GetComponent<Animator>().SetTrigger("isDead");
         spriteFlasher.enabled = false;
+        StartCoroutine(StartDeathAnimation(delay));
     }
 
     /*
@@ -54,5 +55,13 @@ public class PlayerHealth : EntityHealth
         Damage((int)parameters["damage"]);
     }
 
+    /*
+     * Start the death animation after some delay.
+     */
+    private IEnumerator StartDeathAnimation(float delay = 1f)
+    {
+        yield return new WaitForSeconds(delay);
+        GetComponent<Animator>().SetTrigger("isDead");
+    }
 }
 

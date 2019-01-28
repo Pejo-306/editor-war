@@ -58,4 +58,5 @@ MonoBehaviour:
     levelUITag: UILevel
     backgroundTag: UIBackground
     backgroundSprite: {fileID: 21300000, guid: 38a9aef2dac414199a44c6690cf9e6fc, type: 3}
+    delayBeforeDeath: 1
     delayAfterDeath: 2

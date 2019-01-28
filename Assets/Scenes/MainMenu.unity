@@ -827,48 +827,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca6a5762d8c614f72a2dffd6faf7e165, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &1681042356
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.42562
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.6595794
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -9.912039
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562271361266982, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 12c5046530c5440cba79346d72a12420, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1763210158
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 464434521}
-  firstLevelSceneName: Intermission
+  intermissionScenePath: Scenes/Intermission
 --- !u!4 &1763210160
 Transform:
   m_ObjectHideFlags: 0
@@ -925,7 +883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneParameters:
   - paramKey: Level Index
-    paramValue: 6
+    paramValue: 5
   - paramKey: Level Name
     paramValue: Demo
   - paramKey: Level Description

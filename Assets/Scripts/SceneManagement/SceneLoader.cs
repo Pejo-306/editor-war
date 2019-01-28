@@ -33,11 +33,6 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public static string GetScenePath(string sceneName)
-    {
-        return SceneManagementConstants.scenesPath + sceneName;
-    }
-
     public void Load(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

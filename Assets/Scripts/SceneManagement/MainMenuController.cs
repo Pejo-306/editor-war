@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
+using System.IO;
 
 public class MainMenuController : MonoBehaviour 
 {
     public Fader fader;
-    public string firstLevelSceneName;
+
+    public string intermissionScenePath;
 
     public void StartGame()
     {
         PersistantGameManager.Instance.Reset();
         GetComponent<NextSceneController>().SetNextSceneParameters();
-        fader.FadeOutOfLevel(SceneLoader.GetScenePath(firstLevelSceneName));
+        fader.FadeOutOfLevel(intermissionScenePath);
     }
 
     public void QuitGame()

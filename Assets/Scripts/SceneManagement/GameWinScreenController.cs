@@ -7,9 +7,7 @@ public class GameWinScreenController : MonoBehaviour
 
     void OnEnable()
     {
-        string nextScene = SceneLoader.GetScenePath(SceneManagementConstants.mainMenuSceneName);
-
-        fader.FadeOutAfterDelay(nextScene, delayTime);
+        fader.FadeOutAfterDelay(ProjectPaths.mainMenuSceneRPath, delayTime);
     }
 }
 
