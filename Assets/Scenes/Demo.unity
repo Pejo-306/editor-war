@@ -348,43 +348,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: levelSceneController
-      value: 
-      objectReference: {fileID: 114942246097345494, guid: ea7f248d38fd048dea872bceba92681a,
-        type: 2}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: gameOverOptions.playerTag
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: gameOverOptions.playerControlsGroupName
-      value: PlayerControl
-      objectReference: {fileID: 0}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: gameOverOptions.levelUITag
-      value: UILevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: gameOverOptions.backgroundTag
-      value: UIBackground
-      objectReference: {fileID: 0}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: gameOverOptions.backgroundSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 38a9aef2dac414199a44c6690cf9e6fc,
-        type: 3}
-    - target: {fileID: 114892976801896388, guid: 12009e86f0a1d47f1aa76d0b2b39250f,
-        type: 2}
-      propertyPath: gameOverOptions.delayAfterDeath
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12009e86f0a1d47f1aa76d0b2b39250f, type: 2}
   m_IsPrefabAsset: 0
