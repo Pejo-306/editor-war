@@ -52,6 +52,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continues: 3
-  playerDeathSceneName: PlayerDeath
-  continueSceneName: Continue
-  gameOverSceneName: GameOver
+  gameOverOptions:
+    playerTag: Player
+    playerControlsGroupName: PlayerControl
+    levelUITag: UILevel
+    backgroundTag: UIBackground
+    backgroundSprite: {fileID: 21300000, guid: 38a9aef2dac414199a44c6690cf9e6fc, type: 3}
+    delayAfterDeath: 2

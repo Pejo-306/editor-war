@@ -4,11 +4,13 @@ public class ProjectPaths : MonoBehaviour
 {
     public static string spritesRPath { get; private set; }
     public static string viSpritesRPath {  get; private set; } 
+    public static string backgroundSpritesRPath {  get; private set; } 
 
     void Awake()
     {
         spritesRPath = @"Sprites/";
         viSpritesRPath = spritesRPath + @"Bosses/Vi/";
+        backgroundSpritesRPath = spritesRPath + @"Background/";
     }
 
     public static string EscapePath(string path)

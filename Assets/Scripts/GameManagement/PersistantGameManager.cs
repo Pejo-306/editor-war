@@ -2,10 +2,31 @@
 
 public class PersistantGameManager : MonoBehaviour 
 {
+    [System.Serializable]
+    public struct GameOverOptions
+    {
+        public string playerTag;
+
+        public string playerControlsGroupName;
+
+        public string levelUITag;
+
+        public string backgroundTag;
+
+        public Sprite backgroundSprite;
+
+        public float delayAfterDeath;
+    }
+
     public static PersistantGameManager Instance { get; private set; }
 
     public int continues = 3;
+
+    public GameOverOptions gameOverOptions;
+
     private int leftoverContinues;
+
+    private bool triggeredGameOver = false;
 
     void Awake()
     {
@@ -32,25 +53,12 @@ public class PersistantGameManager : MonoBehaviour
 
     public void GameOver()
     {
-        var player = GameObject.FindWithTag("Player");
-        var levelSceneController = (LevelSceneController)FindObjectOfType(
-                typeof(LevelSceneController));
-        var nextSceneController = levelSceneController.GetComponent<NextSceneController>();
-        string playerPosition = string.Format("{0:n3},{1:n3}", 
-                player.transform.position.x, player.transform.position.y);
-        string nextSceneName;
-
-        if (leftoverContinues > 0)
+        if (!triggeredGameOver)
         {
-            nextSceneName = SceneManagementConstants.continueSceneName;
+            SetupPlayerDeathScene();
+            Invoke("SwitchToNextSceneAfterPlayerDeath", gameOverOptions.delayAfterDeath);
+            triggeredGameOver = true;
         }
-        else
-        {
-            nextSceneName = SceneManagementConstants.gameOverSceneName;
-        }
-        nextSceneController.SetParameter("Next Scene", nextSceneName);
-        nextSceneController.SetParameter("Player Position", playerPosition);
-        levelSceneController.ChangeScene(SceneManagementConstants.playerDeathSceneName, false);
     }
 
     public void Reset()
@@ -71,6 +79,37 @@ public class PersistantGameManager : MonoBehaviour
     private void Initialize()
     {
         leftoverContinues = continues;
+    }
+
+    private void SetupPlayerDeathScene()
+    {
+        var background = GameObject.FindWithTag(gameOverOptions.backgroundTag);
+        var player = GameObject.FindWithTag(gameOverOptions.playerTag);
+        var levelUI = GameObject.FindGameObjectsWithTag(gameOverOptions.levelUITag);
+
+        // Play the player's death animation.
+        player.GetComponent<PlayerHealth>().PlayDeathAnimation();
+        player.GetComponent<ComponentController>()
+            .DisableComponents(gameOverOptions.playerControlsGroupName);
+
+        // Disable UI elements of the level.
+        foreach (var UIElement in levelUI)
+        {
+            UIElement.SetActive(false);
+        }
+
+        background.GetComponent<SpriteRenderer>().sprite = gameOverOptions.backgroundSprite;
+    }
+
+    private void SwitchToNextSceneAfterPlayerDeath()
+    {
+        var levelSceneController = (LevelSceneController)FindObjectOfType(
+                typeof(LevelSceneController));
+        string nextSceneName = (leftoverContinues > 0) ? SceneManagementConstants.continueSceneName 
+                                                       :  SceneManagementConstants.gameOverSceneName;
+
+        triggeredGameOver = false;
+        levelSceneController.ChangeScene(nextSceneName);
     }
 }
 

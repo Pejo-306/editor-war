@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 114651739465960036}
   - component: {fileID: 114125911078509218}
   - component: {fileID: 114034347014003766}
+  - component: {fileID: 114486543641444610}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -185,6 +186,22 @@ MonoBehaviour:
   health: 4
   invincibilityTime: 2
   spriteFlasher: {fileID: 114869536455609988}
+--- !u!114 &114486543641444610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224589705877886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a0841b502ec4881ad588d7aa339c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  componentGroups:
+  - groupName: PlayerControl
+    components:
+    - {fileID: 114582560000604088}
+    - {fileID: 114125911078509218}
 --- !u!114 &114582560000604088
 MonoBehaviour:
   m_ObjectHideFlags: 1

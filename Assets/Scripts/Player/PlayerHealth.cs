@@ -15,6 +15,24 @@ public class PlayerHealth : EntityHealth
     }
 
     /*
+     * Trigger player death animation.
+     */
+    public void PlayDeathAnimation(float delay = 1f)
+    {
+        GetComponent<Animator>().SetTrigger("isDead");
+        spriteFlasher.enabled = false;
+    }
+
+    /*
+     * Reset trigger for player death animation.
+     */
+    public void OnPlayerDeathAnimationEnd()
+    {
+        GetComponent<Animator>().ResetTrigger("isDead");
+        GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    /*
      * Trigger game over.
      */
     protected override void OnEntityDeath()

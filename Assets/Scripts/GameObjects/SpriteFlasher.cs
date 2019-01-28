@@ -26,7 +26,7 @@ public class SpriteFlasher : MonoBehaviour
 
     private void ConcealSprite()
     {
-        if (isFlashing)
+        if (enabled && isFlashing)
         {
             spriteRenderer.enabled = false;  // hide sprite
             Invoke("RevealSprite", flashTime);
@@ -35,10 +35,13 @@ public class SpriteFlasher : MonoBehaviour
 
     private void RevealSprite()
     {
-        spriteRenderer.enabled = true;  // render sprite
-        if (isFlashing)
+        if (enabled)
         {
-            Invoke("ConcealSprite", flashTime);
+            spriteRenderer.enabled = true;  // render sprite
+            if (isFlashing)
+            {
+                Invoke("ConcealSprite", flashTime);
+            }
         }
     }
 }

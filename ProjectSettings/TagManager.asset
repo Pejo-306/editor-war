@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Boss
   - BossMovementTester
+  - UIBackground
+  - UILevel
   layers:
   - Default
   - TransparentFX
