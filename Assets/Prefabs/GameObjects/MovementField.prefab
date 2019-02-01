@@ -72,8 +72,7 @@ GameObject:
   - component: {fileID: 4254069131850224}
   - component: {fileID: 50299333929632876}
   - component: {fileID: 114524603834172204}
-  - component: {fileID: 114409549135189144}
-  - component: {fileID: 114349033395411744}
+  - component: {fileID: 114820787472668660}
   m_Layer: 0
   m_Name: MovementField
   m_TagString: Untagged
@@ -311,18 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementField: {fileID: 114524603834172204}
---- !u!114 &114349033395411744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1524562921067788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b5e65014b5cf42208793a9469c5ace3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  followSpeed: 1
 --- !u!114 &114365421127489464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -335,20 +322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementField: {fileID: 114524603834172204}
---- !u!114 &114409549135189144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1524562921067788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2693554b425bb41b2a8638f35d4beecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 0}
-  followXAxis: 0
-  followYAxis: 1
 --- !u!114 &114524603834172204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,3 +346,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementField: {fileID: 114524603834172204}
+--- !u!114 &114820787472668660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524562921067788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18d339146428489889e352f6ed74b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 0}
+  followXAxis: 0
+  followYAxis: 1
+  followSpeed: 1
+  stopZoneRange: 0.1

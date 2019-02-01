@@ -352,14 +352,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46842541f198b4283bba81c225b516f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotsPerSecond: 4
-  shooter: {fileID: 1672444050312532}
   projectilePrefab: {fileID: 1445398899321174, guid: 60d89ecd6b01b4e2c9dbcc6c6d12bf88,
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
+  firingRate: 10
+  randomArcAngle: 90
   target: {fileID: 0}
   staticShootingAngle: 0
-  randomArcAngle: 90
 --- !u!114 &114065862622110224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,12 +370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f892081effc934621a6c7decf08c9aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viMovementComponent: {fileID: 114403161543776084}
-  viBasicDamageProjectileShooter: {fileID: 1702213530730014}
-  viMotionProjectileShooter: {fileID: 1665053966676744}
-  viLineDamageProjectileShooter: {fileID: 1977953472989750}
-  minCooldownTime: 5
-  maxCooldownTime: 15
 --- !u!114 &114066003804444352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,6 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1000
+  invincibilityTime: 0
 --- !u!114 &114403161543776084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -457,14 +451,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d05fec025544619955a7fc6031b1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotsPerSecond: 8
-  shooter: {fileID: 1672444050312532}
   projectilePrefab: {fileID: 1506119559772430, guid: 7be73bbd3c4a14311bd86c1dfc735ee4,
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
+  firingRate: 10
+  randomArcAngle: 90
   target: {fileID: 0}
   staticShootingAngle: 0
-  randomArcAngle: 90
   minCount: 1
   maxCount: 3
   motionUnit: 0.5
@@ -505,7 +498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf7bd55fc656482fb28ffbb08db99c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114881828790720804}
 --- !u!114 &114881828790720804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -517,14 +509,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46842541f198b4283bba81c225b516f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotsPerSecond: 1
-  shooter: {fileID: 1672444050312532}
   projectilePrefab: {fileID: 1976071186673842, guid: 0073ebfb51746442fa8b21a693e86171,
     type: 2}
   spawnPosition: {fileID: 4391335576938926}
+  firingRate: 10
+  randomArcAngle: 0
   target: {fileID: 0}
   staticShootingAngle: 90
-  randomArcAngle: 0
 --- !u!114 &114903279384501386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -554,7 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2030148cc41744b719b71e65209fc306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114676563770944652}
 --- !u!114 &114976456005773174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -566,7 +556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2543b7277b15b4c60a4b27cd97dd569b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114052584005029746}
 --- !u!212 &212633339725106928
 SpriteRenderer:
   m_ObjectHideFlags: 1

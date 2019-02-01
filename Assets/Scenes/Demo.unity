@@ -239,9 +239,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114409549135189144, guid: 7f123cb106cb4487ebefe2331be82f9c,
+    - target: {fileID: 114820787472668660, guid: 7f123cb106cb4487ebefe2331be82f9c,
         type: 2}
-      propertyPath: objectToFollow
+      propertyPath: targetObject
       value: 
       objectReference: {fileID: 1055188980}
     - target: {fileID: 1524562921067788, guid: 7f123cb106cb4487ebefe2331be82f9c, type: 2}
@@ -458,7 +458,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114676563770944652, guid: e285746a9913445e28b51d2553de2a23,
+    - target: {fileID: 114052584005029746, guid: e285746a9913445e28b51d2553de2a23,
         type: 2}
       propertyPath: target
       value: 
@@ -468,11 +468,15 @@ Prefab:
       propertyPath: movementField
       value: 
       objectReference: {fileID: 180063327}
-    - target: {fileID: 114052584005029746, guid: e285746a9913445e28b51d2553de2a23,
+    - target: {fileID: 114676563770944652, guid: e285746a9913445e28b51d2553de2a23,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 1055188980}
+    - target: {fileID: 1002423089555244, guid: e285746a9913445e28b51d2553de2a23, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1153876142915120, guid: e285746a9913445e28b51d2553de2a23, type: 2}
       propertyPath: m_IsActive
       value: 0
