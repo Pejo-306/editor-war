@@ -1,28 +1,17 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class HitReceiver : MonoBehaviour
+/// <summary>
+/// Component which provides an interface for receiving hits.
+/// </summary>
+public abstract class HitReceiver : MonoBehaviour
 {
-    public MonoBehaviour affectedComponent;
-    public List<MethodStatics.MethodParameter> calledMethodParameters;
-    private Dictionary<string, object> calledMethodParametersDictionary; 
-
-    void Awake()
-    {
-        calledMethodParametersDictionary = new Dictionary<string, object>();
-    }
-    
-    public void ReceiveHit()
-    {
-        MethodStatics.ParseMethodParametersToDictionary(calledMethodParameters, 
-                calledMethodParametersDictionary);
-        affectedComponent.BroadcastMessage("ComponentReceiveHit", 
-                calledMethodParametersDictionary);
-    }
-
-    public void AddCalledMethodParameter(string name, object val)
-    {
-        calledMethodParameters.Add(new MethodStatics.MethodParameter(name, val));
-    }
+    /// <summary>
+    /// Receive a hit.
+    /// </summary>
+    /// <param name="args">
+    /// Variable-length list of parameters to be utilized by subclass implementation.
+    /// </param>
+    public abstract void ReceiveHit(params object[] args);
 }
 
